@@ -1,1 +1,0 @@
-{"version":3,"sources":["src/css/style.scss"],"names":[],"mappings":"AAGA,KACI","file":"style.06072739.css","sourceRoot":"..","sourcesContent":["$primary: gray;\n$bodyColor: $primary;\n\nbody {\n    background: $bodyColor;\n}"]}
