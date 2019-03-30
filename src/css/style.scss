@@ -1,6 +1,9 @@
-$primary: white;
-$bodyColor: $primary;
+@import 'variables';
+@import 'base';
+@import 'type';
 
-body {
-    background: $bodyColor;
-}
+// plugins
+@import 'button';
+
+// theme
+@import 'theme';

@@ -16,16 +16,159 @@
     <link rel="mask-icon" href="src/images/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#ffca02">
     <meta name="theme-color" content="#ffca02">
+    <link rel="shortcut icon" type="image/x-icon" href="">
     -->
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500,500italic,400italic,300italic,100italic,700italic">
     <link rel="stylesheet" href="src/css/style.scss">
 </head>
 
-<body style="text-align: center; padding-top: 100px; color: blue;">
-    <h1> Hi, I am </h1>
-    <img src="src/images/full-logo-svg-minified.svg" alt="Jaspreet Singh" style="width: 60%;">
+<body>
+    <!-- Header Section - Top -->
+    <div class="container header-contianer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7 header-left">
+                <h1>Jaspreet Singh</h1>
+                <h2>Developer | Designer | Tech Enthusiast</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 header-right">
+                <ul class="icons no-print">
+                    <li>
+                        <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}"
+                            class="button button--sacnite button--round-l">
+                            <i class="fa fa-github" title="Github link"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"
+                            class="button button--sacnite button--round-l">
+                            <i class="fa fa-linkedin" title="Linkedin link"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/"
+                            class="button button--sacnite button--round-l">
+                            <i class="fa fa-facebook" title="Facebook link"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.instagram.com/{{ site.instagram_username| cgi_escape | escape }}"
+                            class="button button--sacnite button--round-l">
+                            <i class="fa fa-instagram" title="Instagram link"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}"
+                            class="button button--sacnite button--round-l">
+                            <i class="fa fa-twitter" title="Twitter link"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.youtube.com/{{ site.youtube_username| cgi_escape | escape }}"
+                            class="button button--sacnite button--round-l">
+                            <i class="fa fa-youtube-play" title="Youtube link"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    Email: <a href="mailto:erjaspreet57@gmail.com" target="_blank">erjaspreet57@gmail.com</a>
+                </p>
 
+                <p>
+                    Phone: 0-9052275589 / 0-9915605470
+                </p>
+                <p>
+                    Web: <a href="https://www.jaspreet-singh.com" target="_blank">www.jaspreet-singh.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section - Bottom -->
+
+    <!-- Page Wrapper - Top -->
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <!-- About Me Section - Top -->
+            <div class="container intro-container">
+                <h3>Who Am I</h3>
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-sm-4">
+                        <img src="src/images/me.svg" />
+                        <!-- <span class="profile-img" style="background-image: url('src/images/me.svg')"></span> -->
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8">
+                        <p>Hi, my name’s Brett and I’m a senior network system administrator. As well as administrating
+                            systems I also have experience making software and web apps. I have worked at a number of
+                            companies gaining teamwork and leadership skills.</p>
+                        <p>I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark></p>
+                    </div>
+                </div>
+            </div>
+            <!-- About Me Section - Bottom -->
+
+            <!-- My Experience Section - Top -->
+            <div class="container experience-container">
+                <h3>My Experience</h3>
+                <!-- Sourcefuse Technologies, Mohali -->
+                <div class="row clearfix experience">
+                    <div class="col-xs-12 col-sm-4 left-column">
+                        <h4 class="name">
+                            <a href="#">
+                                Sourcefuse Technologies, Mohali
+                            </a>
+                        </h4>
+                        <p><b>Webapp Engineer - Full Stack Developer</b></p>
+                        <p>November 2017 - Present</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <p class="quote">Solving 21st century problems by diging holes and making game changing products
+                            like the *not a flamethrower*
+                        </p>
+                        <p>Every company needs its networks properly administered and The Boring Compay is no exception.
+                            Digging holes is hard and I play my part making sure the whole company stays connected. I
+                            lead a team of 5 people and enjoy driving the company to try new technologies.</p>
+                    </div>
+                </div>
+
+                <!-- Instarem, Mumbai -->
+                <div class="row clearfix experience">
+                    <div class="col-xs-12 col-sm-4 left-column">
+                        <h4 class="name">
+                            <a href="#">
+                                Instarem Mumbai
+                            </a>
+                        </h4>
+                        <p><b>Full Stack Javascript Developer</b></p>
+                        <p>August 2017 - November 2017</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <p class="quote">Solving 21st century problems by diging holes and making game changing products
+                            like the *not a flamethrower*
+                        </p>
+                        <p>Every company needs its networks properly administered and The Boring Compay is no exception.
+                            Digging holes is hard and I play my part making sure the whole company stays connected. I
+                            lead a team of 5 people and enjoy driving the company to try new technologies.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- My Experience Section - Bottom -->
+        </div>
+    </main>
+    <!-- Page Wrapper - Bottom -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- warning: scripts are working down here -->
     <script src="src/main.js"></script>
 </body>
 
