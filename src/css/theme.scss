@@ -66,18 +66,13 @@ ul.icons a {
 }
 
 .profile-img {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  display: block;
-  border-radius: 100px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat, no-repeat;
-  -moz-box-shadow: inset 0 0 20px #636161;
-  -webkit-box-shadow: inset 0 0 20px #636161;
-  box-shadow: inset 0 0 20px #636161;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  height: 300px;
+  padding: 5px;
 }
 
 .into-text-1 {
@@ -95,6 +90,25 @@ ul.icons a {
 .education-container {
   h3 {
     margin-bottom: 0;
+  }
+}
+
+.intro-container {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .download-resume-link {
+    font-size: 26px;
+    padding: 5px;
+    border: 0 solid black;
+    transition: border-width 0.2s;
+    -webkit-transition: border-width 0.2s;
+  }
+
+  .download-resume-link:hover {
+    border: 1px solid black;
   }
 }
 
