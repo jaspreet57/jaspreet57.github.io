@@ -1,6 +1,9 @@
 {
   "name": "jaspreet57.github.io",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": "Jaspreet Singh",
+  "license": "MIT",
+  "description": "Portfolio of Jaspreet Singh (erjaspreet57@gmail.com)",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
@@ -8,10 +11,12 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "rm -rf build && react-scripts start",
+    "build": "rm -rf build && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b master"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
