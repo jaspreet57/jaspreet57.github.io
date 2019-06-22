@@ -1,16 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const StyledH1 = styled.h1`
-  color: red;
-  font-size: 24px;
-`;
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './pages/home';
+import AboutMe from './pages/about-me';
 
 function App() {
   return (
-    <StyledH1 className="my-header" onClick={() => console.log('clicked')}>
-      <strong>My Portfolio </strong>
-    </StyledH1>
+    <BrowserRouter>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about-me" component={AboutMe} />
+    </BrowserRouter>
   );
 }
 
