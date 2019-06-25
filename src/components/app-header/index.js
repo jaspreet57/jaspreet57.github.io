@@ -11,7 +11,7 @@ function AppHeader() {
   return (
     <div>
       <StyledH1 className="my-header">
-        <h1>My Portfolio </h1>
+        <h1>Jaspreet Singh</h1>
       </StyledH1>
       <NavigationBar />
     </div>
