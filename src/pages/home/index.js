@@ -5,13 +5,13 @@ import AppHeader from '../../components/app-header';
 /* Full Page Component is used from https://github.com/cmswalker/fullpage-react#readme */
 function Home() {
   const slides = [
-    <Slide style={{ background: '#5dfdcb' }}>
+    <Slide className="fullpage-slide">
       <AppHeader />
     </Slide>,
-    <Slide style={{ background: '#22333b', color: 'white' }}>
+    <Slide className="fullpage-slide">
       About Section
     </Slide>,
-    <Slide style={{ background: 'rgb(154, 200, 222)', color: 'white' }}>
+    <Slide className="fullpage-slide">
       Work Section
     </Slide>,
   ];
