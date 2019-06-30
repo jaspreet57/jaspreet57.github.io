@@ -6,6 +6,7 @@ function AppWrapper({ children }) {
   return (
     <StyledWrapper>
         { children }
+        <div className="universe" />
     </StyledWrapper>
   );
 }

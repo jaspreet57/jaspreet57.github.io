@@ -1,11 +1,10 @@
 import React from 'react';
-import AppHeader from '../../components/app-header';
 
 
 function AboutMe() {
   return (
     <div>
-        <AppHeader />
+        <h1>About Me</h1>
         <h1>This is about me page</h1>
     </div>
   );

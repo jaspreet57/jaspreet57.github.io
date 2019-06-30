@@ -7,7 +7,7 @@ function NavigationBar() {
   return (
     <StyledHeader>
       <ExternalLink href="./">
-        Jaspreet Singh
+        PORTFOLIO
       </ExternalLink>
       <FlexMenu>
         <SocialLinks />

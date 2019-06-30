@@ -11,12 +11,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: #333;
-
   }
 
   .fullpage-slide {
     font-size: 24px;
-    background: white;
   }
 
   mark {
