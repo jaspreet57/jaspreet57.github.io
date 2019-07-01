@@ -26,6 +26,28 @@ const GlobalStyle = createGlobalStyle`
     -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
     box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
   }
+
+  .page {
+    position: relative;
+  }
+
+  .page-enter {
+    opacity: 0;
+  }
+
+  .page-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+
+  .page-exit {
+    opacity: 1;
+  }
+
+  .page-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
 `;
 
 export default GlobalStyle;

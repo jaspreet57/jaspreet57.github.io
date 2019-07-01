@@ -36,7 +36,7 @@ const SocialLink = styled.a`
         background: rgba(0, 0, 0, 0.025);
         color: #333;
         &::before {
-            box-shadow: inset 0 0 0 2px #333;
+            box-shadow: inset 0 0 0 2px white;
             transform: scale3d(1, 1, 1);
         }
     }
@@ -50,7 +50,7 @@ const SocialLink = styled.a`
         height: 100%;
         border-radius: inherit;
         z-index: -1;
-        box-shadow: inset 0 0 0 35px #333;
+        box-shadow: inset 0 0 0 35px #006e7c;
         transform: scale3d(0.9, 0.9, 1);
         transition: box-shadow 0.3s, transform 0.3s;
     }

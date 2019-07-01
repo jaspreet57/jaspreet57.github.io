@@ -1,10 +1,11 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { SectionWrapper, TitleBox, ShowcaseBox } from '../style';
 
-function MeSection() {
+function MeSection({ active }) {
   return (
     <SectionWrapper>
-      <TitleBox>
+      <TitleBox active={active}>
         <h1 className="title">Jaspreet Singh</h1>
         <div className="title-separator">
           <img alt="title-separator" src="./images/title-separator.svg"/>
@@ -13,13 +14,20 @@ function MeSection() {
             <h2>Developer | Designer | Tech Enthusiast</h2>
         </div>
       </TitleBox>
-      <ShowcaseBox>
+      <ShowcaseBox active={active}>
         <div className="image-wrapper">
-            <img alt="Showcase Here" href="" />
+            <img alt="Showcase Here" style={{
+              position: 'relative',
+              top: '-10vh'
+            }} src="./images/plane.svg" />
         </div>
       </ShowcaseBox>
     </SectionWrapper>
   );
+}
+
+MeSection.propTypes = {
+  active: PropTypes.bool.isRequired,
 }
 
 export default MeSection;

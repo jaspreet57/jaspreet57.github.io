@@ -4,22 +4,10 @@ import MeSection from './sections/MeSection';
 import AboutSection from './sections/AboutSection';
 import WorkSection from './sections/WorkSection';
 import SectionMenu from '../../components/section-menu';
+import { slides as slidesConstants } from '../../constants/slides';
 
 const { changeFullpageSlide } = Fullpage;
 const slideController = changeFullpageSlide.bind(null);
-
-
-const slides = [
-  <Slide className="fullpage-slide me-section">
-    <MeSection />
-  </Slide>,
-  <Slide className="fullpage-slide about-section">
-    <AboutSection />
-  </Slide>,
-  <Slide className="fullpage-slide work-section">
-    <WorkSection />
-  </Slide>,
-];
 
 const fullPageOptions = {
   // for mouse/wheel events
@@ -31,18 +19,17 @@ const fullPageOptions = {
   touchSensitivity: 2,
   scrollSpeed: 500,
   hideScrollBars: true,
+  resetSlides: true,
   enableArrowKeys: true,
   activeSlide: 0,
-  slides,
 };
-
-
 
 /* Full Page Component is used from https://github.com/cmswalker/fullpage-react#readme */
 class Home extends Component {
   state = {
     activeSlide: 0,
   };
+
 
   onSlideChangeStart = (name, props, state, newState) => {
     this.setState({
@@ -53,11 +40,24 @@ class Home extends Component {
   render() {
     const { activeSlide } = this.state;
 
+    const slides = [
+      <Slide className="fullpage-slide">
+        <MeSection active={slidesConstants.ME.slide === activeSlide}/>
+      </Slide>,
+      <Slide className="fullpage-slide">
+        <AboutSection active={slidesConstants.ABOUT.slide === activeSlide} />
+      </Slide>,
+      <Slide className="fullpage-slide">
+        <WorkSection active={slidesConstants.WORK.slide === activeSlide} />
+      </Slide>,
+    ];
+  
+    fullPageOptions.slides = slides;
+
     return (
-      <React.Fragment>
-        <SectionMenu activeSlide={activeSlide} changeFullPageSlide={(slideNum) => slideController(slideNum)}/>
-        <Fullpage onSlideChangeStart={this.onSlideChangeStart} {...fullPageOptions} />
-      </React.Fragment>
+        <Fullpage onSlideChangeStart={this.onSlideChangeStart} {...fullPageOptions} >
+          <SectionMenu activeSlide={activeSlide} changeFullPageSlide={(slideNum) => slideController(slideNum)}/>
+        </Fullpage>
     )
 
   }

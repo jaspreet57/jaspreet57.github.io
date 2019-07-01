@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const ExternalLink = styled.a`
   font-size: 2.4rem;
   font-weight: 400;
-  color: inherit;
+  color: #FFEB3B;
   opacity: 1;
   transition: 0.3s;
   text-decoration: none;
