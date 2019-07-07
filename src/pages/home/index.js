@@ -3,6 +3,8 @@ import { Fullpage, Slide } from 'fullpage-react';
 import MeSection from './sections/MeSection';
 import AboutSection from './sections/AboutSection';
 import WorkSection from './sections/WorkSection';
+import BlogSection from './sections/BlogSection';
+import ContactMeSection from './sections/ContactMeSection';
 import SectionMenu from '../../components/section-menu';
 import { slides as slidesConstants } from '../../constants/slides';
 
@@ -30,19 +32,18 @@ class Home extends Component {
     activeSlide: 0,
   };
 
-
   onSlideChangeStart = (name, props, state, newState) => {
     this.setState({
       activeSlide: newState.activeSlide,
     });
-  }
+  };
 
   render() {
     const { activeSlide } = this.state;
 
     const slides = [
       <Slide className="fullpage-slide">
-        <MeSection active={slidesConstants.ME.slide === activeSlide}/>
+        <MeSection active={slidesConstants.ME.slide === activeSlide} />
       </Slide>,
       <Slide className="fullpage-slide">
         <AboutSection active={slidesConstants.ABOUT.slide === activeSlide} />
@@ -50,16 +51,27 @@ class Home extends Component {
       <Slide className="fullpage-slide">
         <WorkSection active={slidesConstants.WORK.slide === activeSlide} />
       </Slide>,
+      <Slide className="fullpage-slide">
+        <BlogSection active={slidesConstants.BLOGS.slide === activeSlide} />
+      </Slide>,
+      <Slide className="fullpage-slide">
+        <ContactMeSection active={slidesConstants.CONTACT.slide === activeSlide} />
+      </Slide>,
     ];
-  
+
     fullPageOptions.slides = slides;
 
     return (
-        <Fullpage onSlideChangeStart={this.onSlideChangeStart} {...fullPageOptions} >
-          <SectionMenu activeSlide={activeSlide} changeFullPageSlide={(slideNum) => slideController(slideNum)}/>
-        </Fullpage>
-    )
-
+      <Fullpage
+        onSlideChangeStart={this.onSlideChangeStart}
+        {...fullPageOptions}
+      >
+        <SectionMenu
+          activeSlide={activeSlide}
+          changeFullPageSlide={slideNum => slideController(slideNum)}
+        />
+      </Fullpage>
+    );
   }
 }
 

@@ -33,6 +33,24 @@ function SectionMenu({ activeSlide, changeFullPageSlide }) {
           My Work
         </button>
       </MenuItem>
+      <MenuItem active={slides.BLOGS.slide === activeSlide}>
+        <img src="./images/menu-stroke.svg" alt="menu-stroke" />
+        <button
+          type="button"
+          onClick={() => changeFullPageSlide(slides.BLOGS.slide)}
+        >
+          My Blogs
+        </button>
+      </MenuItem>
+      <MenuItem active={slides.CONTACT.slide === activeSlide}>
+        <img src="./images/menu-stroke.svg" alt="menu-stroke" />
+        <button
+          type="button"
+          onClick={() => changeFullPageSlide(slides.CONTACT.slide)}
+        >
+          Contact
+        </button>
+      </MenuItem>
     </SectionMenuWrapper>
   );
 }

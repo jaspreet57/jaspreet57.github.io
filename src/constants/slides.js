@@ -7,6 +7,12 @@ const slides = {
     },
     'WORK': {
         slide: 2
+    },
+    'BLOGS': {
+        slide: 3
+    },
+    'CONTACT': {
+        slide: 4
     }
 }
 

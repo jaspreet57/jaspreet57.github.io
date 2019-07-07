@@ -2,17 +2,17 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { SectionWrapper, TitleBox, ShowcaseBox, PageLink } from '../style';
 
-function AboutSection({ active }) {
+function BlogSection({ active }) {
   return (
     <SectionWrapper>
       <TitleBox active={active}>
-        <h1 className="title">About Me</h1>
+        <h1 className="title">My Blogs</h1>
         <div className="title-separator">
           <img alt="title-separator" src="./images/title-separator.svg"/>
         </div>
         <div className="title-content">
-            <h2>I&apos;m a Full Stack Javascript Developer.</h2>
-            <PageLink to="/about-me" >Show me more</PageLink>
+            <h2>I have started writing for the community.</h2>
+            <PageLink to="/my-blogs" >Show me more</PageLink>
         </div>
       </TitleBox>
       <ShowcaseBox active={active}>
@@ -24,9 +24,8 @@ function AboutSection({ active }) {
   );
 }
 
-
-AboutSection.propTypes = {
+BlogSection.propTypes = {
   active: PropTypes.bool.isRequired,
 }
 
-export default AboutSection;
+export default BlogSection;
