@@ -27,6 +27,7 @@ const MenuItem = styled.div`
         margin-right: auto;
     }
     transition: width 0.3s;
+    will-change: width;
     &:hover {
         width: ${({ active }) => active ? '100%' : '60%'};
     }

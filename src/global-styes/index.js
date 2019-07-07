@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
   .page-enter-active {
     opacity: 1;
     transition: opacity 300ms;
+    will-change: opacity;
   }
 
   .page-exit {

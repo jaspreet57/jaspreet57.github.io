@@ -24,7 +24,7 @@ const TitleBox = styled.div`
     max-width: 100%;
     margin: none;
   }
-  
+
   .title {
     position: relative;
     width: fit-content;
@@ -34,10 +34,10 @@ const TitleBox = styled.div`
       font-size: 5rem;
     }
     margin: 5px;
-    left: ${({ active }) => active ? '0': '-150%'};
-    transition: left 0.6s ease-out;
-    /* transition: left 0.6s cubic-bezier(1.000, -0.530, 0.405, 1.425); */
+    transform: ${({ active }) => active ? 'none': 'translateX(-150%)'};
+    transition: transform 0.6s ease-out;
     transition-delay: 0.1s;
+    will-change: transform;
   }
   .title-separator {
     position: relative;
@@ -48,9 +48,10 @@ const TitleBox = styled.div`
     img {
       width: 100%;
     }
-    left: ${({ active }) => active ? '0': '-160%'};
-    transition: left 0.7s ease-out;
+    transform: ${({ active }) => active ? 'none': 'translateX(-160%)'};
+    transition: transform 0.7s ease-out;
     transition-delay: 0.1s;
+    will-change: transform;
   }
 
   .title-content {
@@ -62,10 +63,11 @@ const TitleBox = styled.div`
     }
     padding: 10px;
     width: fit-content;
-    left: ${({ active }) => active ? '0': '50%'};
     opacity: ${({ active }) => active ? '1': '0'};
-    transition: left 0.8s ease-out, opacity 0.8s ease-out;
+    transform: ${({ active }) => active ? 'none': 'translateX(50%)'};
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;;
     transition-delay: 0.1s;
+    will-change: transform;
     h2 {
       font-weight: 400;
       font-size: 20px;
@@ -82,9 +84,11 @@ const ShowcaseBox = styled.div`
   @media (min-width: 992px) {
     flex-basis: 50%;
   }
-  right: ${({ active }) => active ? '0': '-30%'};
   opacity: ${({ active }) => active ? '1': '0'};
-  transition: right 0.8s ease-out, opacity 0.8s ease-out;
+  transform: ${({ active }) => active ? 'none': 'translateX(30%)'};
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;;
+  transition-delay: 0.1s;
+  will-change: transform;
   .image-wrapper {
     width: 100vw;
     @media (min-width: 992px) {
