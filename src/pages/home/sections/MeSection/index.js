@@ -1,10 +1,12 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { SectionWrapper, TitleBox, ShowcaseBox } from '../style';
+import TopMargin from '../../../../styled-components/top-margin';
 
 function MeSection({ active }) {
   return (
     <SectionWrapper>
+      <TopMargin />
       <TitleBox active={active}>
         <h1 className="title">Jaspreet Singh</h1>
         <div className="title-separator">
@@ -18,8 +20,10 @@ function MeSection({ active }) {
         <div className="image-wrapper">
             <img alt="Showcase Here" style={{
               position: 'relative',
-              top: '-10vh'
-            }} src="./images/plane.svg" />
+              display: 'block',
+              margin: 'auto',
+              height: '60vh'
+            }} src="./images/jsingh-dive.svg" />
         </div>
       </ShowcaseBox>
     </SectionWrapper>

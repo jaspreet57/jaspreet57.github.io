@@ -5,7 +5,10 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 40px 0;
+  padding: 40px 5px 0;
+  @media (min-width: 992px) {
+    padding: 40px 40px 0;
+  }
   display: flex;
   justify-content: space-between;
   z-index: 100;
