@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ExternalLink = styled.a`
-  font-size: 2.4rem;
+  font-size: ${({ small }) => small ? '20px': '2.4rem'};
   font-weight: 400;
   color: #FFEB3B;
   opacity: 1;

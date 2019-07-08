@@ -84,11 +84,10 @@ const ShowcaseBox = styled.div`
   @media (min-width: 992px) {
     flex-basis: 50%;
   }
-  opacity: ${({ active }) => active ? '1': '0'};
-  transform: ${({ active }) => active ? 'none': 'translateX(30%)'};
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;;
-  transition-delay: 0.1s;
-  will-change: transform;
+  /* opacity: ${({ active }) => active ? '1': '0'};
+  transition: opacity 0.5s ease-out;
+  transition-delay: 0.5s;
+  will-change: opacity; */
   .image-wrapper {
     width: 100vw;
     @media (min-width: 992px) {

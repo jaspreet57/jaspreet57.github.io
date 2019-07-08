@@ -14,8 +14,8 @@ function MyBlogs() {
         <br />
         <br />
         <br />
-        <h1>About Me</h1>
-        <h1>This is about me page</h1>
+        <h1>Blogs</h1>
+        <h1>This is about my blogs</h1>
         <Link to="/" style={{
           color: 'white',
           textDecoration: 'none',

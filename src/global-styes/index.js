@@ -17,11 +17,26 @@ const GlobalStyle = createGlobalStyle`
     font-size: 24px;
   }
 
+  p {
+    font-size: 18px;
+    line-height: 1.4em;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+    padding: 10px;
+  }
+
+  .underline {
+    background-image: linear-gradient(to right, #f44336 75%, transparent 75%);
+    background-position: 0 1.04em;
+    background-repeat: repeat-x;
+    background-size: 1px;
+  }
+
   mark {
     padding: 2px 4px;
     font-size: 90%;
     color: #fff;
-    background-color: #333;
+    background-color: #f44336;
     border-radius: 3px;
     -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
     box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
@@ -49,6 +64,7 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
     transition: opacity 300ms;
   }
+
 `;
 
 export default GlobalStyle;
