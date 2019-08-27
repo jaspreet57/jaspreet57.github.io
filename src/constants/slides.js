@@ -1,18 +1,23 @@
 const slides = {
     'ME': {
-        slide: 0
+        slide: 0,
+        anchorName: '_me'
     },
     'ABOUT': {
-        slide: 1
+        slide: 1,
+        anchorName: '_about'
     },
     'WORK': {
-        slide: 2
+        slide: 2,
+        anchorName: '_work'
     },
     'BLOGS': {
-        slide: 3
+        slide: 3,
+        anchorName: '_blogs'
     },
     'CONTACT': {
-        slide: 4
+        slide: 4,
+        anchorName: '_contact'
     }
 }
 

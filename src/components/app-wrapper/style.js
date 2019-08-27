@@ -44,9 +44,9 @@ const StyledWrapper = styled.div`
 	animation: animateBubble 17s linear infinite, sideWays 2s ease-in-out infinite alternate;
 	
 	left: -5%;
-	top: 5%;
-	transform: scale(0.6);
-  will-change: transform;
+  top: 5%;
+  transform: scale(0.6);
+  will-change: margin-left;
 }
 
 .x2 {
@@ -55,7 +55,7 @@ const StyledWrapper = styled.div`
 	left: 5%;
 	top: 80%;
 	transform: scale(0.4);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x3 {
@@ -64,7 +64,7 @@ const StyledWrapper = styled.div`
 	left: 10%;
 	top: 40%;
 	transform: scale(0.7);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x4 {
@@ -73,7 +73,7 @@ const StyledWrapper = styled.div`
 	left: 20%;
 	top: 0;
 	transform: scale(0.3);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x5 {
@@ -82,7 +82,7 @@ const StyledWrapper = styled.div`
 	left: 30%;
 	top: 50%;
 	transform: scale(0.5);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x6 {
@@ -91,7 +91,7 @@ const StyledWrapper = styled.div`
 	left: 50%;
 	top: 0;
 	transform: scale(0.8);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x7 {
@@ -100,7 +100,7 @@ const StyledWrapper = styled.div`
 	left: 65%;
 	top: 70%;
 	transform: scale(0.4);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x8 {
@@ -109,7 +109,7 @@ const StyledWrapper = styled.div`
 	left: 80%;
 	top: 10%;
 	transform: scale(0.3);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x9 {
@@ -118,7 +118,7 @@ const StyledWrapper = styled.div`
 	left: 90%;
 	top: 50%;
 	transform: scale(0.6);
-  will-change: transform;
+  will-change: margin-left;
 }
 
 .x10 {
@@ -127,9 +127,8 @@ const StyledWrapper = styled.div`
 	left: 80%;
 	top: 80%;
 	transform: scale(0.3);
-  will-change: transform;
+  will-change: margin-left;
 }
-
 
 /* OBJECTS */
 

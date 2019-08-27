@@ -1,28 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SkillsCloud } from './style';
+import { PageWrapper, PageTitle } from '../styles';
 
 function AboutMe() {
   return (
-    <div
-      style={{
-        color: 'white',
-        paddingTop: '110px',
-      }}
-    >
+    <PageWrapper>
       <div className="container">
         <div className="container__row">
           <div className="container__col-12">
-            <Link
-              to="/"
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              Go Back
-            </Link>
-            <h1>About Me</h1>
+            <PageTitle>
+              <h1>About Me</h1>
+              <div className="divider-custom">
+                <Link to="/#_about">Back</Link>
+                <div className="divider-custom-line first" />
+                <div className="divider-custom-icon">
+                  <i className="fa fa-code" />
+                </div>
+                <div className="divider-custom-line last" />
+                <Link to="/my-work">Next</Link>
+              </div>
+            </PageTitle>
           </div>
         </div>
         <div className="container__row">
@@ -35,10 +33,10 @@ function AboutMe() {
               >
                 <strong>Hi</strong>
               </span>
-              , my name’s <span className="underline">Jaspreet Singh</span> and I’m a{' '}
-              <mark>Full Stack Javascript Developer</mark>. I have experience{' '}
-              making software and web apps in Javascript and Java using{' '}
-              various technologies like <mark>Servlets/JSP</mark>,{' '}
+              , my name’s <span className="underline">Jaspreet Singh</span> and
+              I’m a <mark>Full Stack Javascript Developer</mark>. I have
+              experience making software and web apps in Javascript and Java
+              using various technologies like <mark>Servlets/JSP</mark>,{' '}
               <mark>NodeJs</mark> ( Express / Loopback / Microservices ),{' '}
               <mark>ReactJs / Redux</mark>, <mark>Angular</mark>, etc.
             </p>
@@ -46,7 +44,7 @@ function AboutMe() {
         </div>
         <div className="container__row">
           <div className="container__col-12">
-            <h1 style={{ textAlign: 'center'}}>Machinery in my Head !</h1>
+            <h1 style={{ textAlign: 'center' }}>Machinery in my Head !</h1>
             <SkillsCloud>
               <li>Javascript</li>
               <li>HTML 5</li>
@@ -65,7 +63,7 @@ function AboutMe() {
           </div>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   );
 }
 

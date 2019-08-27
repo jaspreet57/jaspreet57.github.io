@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SectionMenuWrapper = styled.div`
+const SectionMenuWrapper = styled.ul`
   position: fixed;
   width: 150px;
   transform: translate3d(0, -50%, 0);
@@ -18,8 +18,8 @@ const SectionMenuWrapper = styled.div`
   }
 `;
 
-const MenuItem = styled.div`
-    width: ${({ active }) => active ? '100%' : '50%' };
+const MenuItem = styled.li`
+    width: 50%;
     margin-left: auto;
     margin-right: 0;
     @media (min-width: 992px) {
@@ -29,12 +29,19 @@ const MenuItem = styled.div`
     transition: width 0.3s;
     will-change: width;
     &:hover {
-        width: ${({ active }) => active ? '100%' : '60%'};
+        width: 60%;
+    }
+    &.active {
+        width: 100%;
+        &:hover {
+            width: 100%;
+        }
     }
     img {
         width: 100%;
     }
-    button {
+    a {
+        display:block;
         text-decoration: none;
         width: 100%;
         padding: 0;
@@ -46,9 +53,6 @@ const MenuItem = styled.div`
         font: inherit;
         color: white;
         background-color: transparent;
-        /* show a hand cursor on hover; some argue that we
-        should keep the default arrow cursor for buttons */
-        cursor: pointer;
         &:focus {
             outline: none;
         }

@@ -1,12 +1,10 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { SectionWrapper, TitleBox, ShowcaseBox, PageLink } from '../style';
-import TopMargin from '../../../../styled-components/top-margin';
 
 function AboutSection({ active }) {
   return (
     <SectionWrapper>
-      <TopMargin />
       <TitleBox active={active}>
         <h1 className="title">About Me</h1>
         <div className="title-separator">

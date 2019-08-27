@@ -65,7 +65,7 @@ const TitleBox = styled.div`
     width: fit-content;
     opacity: ${({ active }) => active ? '1': '0'};
     transform: ${({ active }) => active ? 'none': 'translateX(50%)'};
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
     transition-delay: 0.1s;
     will-change: transform;
     h2 {

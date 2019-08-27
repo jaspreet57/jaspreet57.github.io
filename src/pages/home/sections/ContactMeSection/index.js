@@ -2,12 +2,10 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { SectionWrapper, TitleBox, ShowcaseBox } from '../style';
 import { ExternalLink } from '../../../../styled-components/custom-links';
-import TopMargin from '../../../../styled-components/top-margin';
 
 function ContactMeSection({ active }) {
   return (
     <SectionWrapper>
-      <TopMargin />
       <TitleBox active={active}>
         <h1 className="title">Get in touch</h1>
         <div className="title-separator">

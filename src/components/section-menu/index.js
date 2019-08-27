@@ -1,63 +1,52 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { SectionMenuWrapper, MenuItem } from './style';
 import { slides } from '../../constants/slides';
 
-function SectionMenu({ activeSlide, changeFullPageSlide }) {
+function SectionMenu() {
   return (
-    <SectionMenuWrapper>
-      <MenuItem active={slides.ME.slide === activeSlide}>
+    <SectionMenuWrapper id="sectionMenu">
+      <MenuItem data-menuanchor={slides.ME.anchorName}>
         <img src="./images/menu-stroke.svg" alt="menu-stroke" />
-        <button
-          type="button"
-          onClick={() => changeFullPageSlide(slides.ME.slide)}
+        <a
+          href={`#${slides.ME.anchorName}`}
         >
           Me
-        </button>
+        </a>
       </MenuItem>
-      <MenuItem active={slides.ABOUT.slide === activeSlide}>
+      <MenuItem data-menuanchor={slides.ABOUT.anchorName}>
         <img src="./images/menu-stroke.svg" alt="menu-stroke" />
-        <button
-          type="button"
-          onClick={() => changeFullPageSlide(slides.ABOUT.slide)}
+        <a
+          href={`#${slides.ABOUT.anchorName}`}
         >
           About Me
-        </button>
+        </a>
       </MenuItem>
-      <MenuItem active={slides.WORK.slide === activeSlide}>
+      <MenuItem data-menuanchor={slides.WORK.anchorName}>
         <img src="./images/menu-stroke.svg" alt="menu-stroke" />
-        <button
-          type="button"
-          onClick={() => changeFullPageSlide(slides.WORK.slide)}
+        <a
+          href={`#${slides.WORK.anchorName}`}
         >
           My Work
-        </button>
+        </a>
       </MenuItem>
-      <MenuItem active={slides.BLOGS.slide === activeSlide}>
+      <MenuItem data-menuanchor={slides.BLOGS.anchorName}>
         <img src="./images/menu-stroke.svg" alt="menu-stroke" />
-        <button
-          type="button"
-          onClick={() => changeFullPageSlide(slides.BLOGS.slide)}
+        <a
+          href={`#${slides.BLOGS.anchorName}`}
         >
           My Blogs
-        </button>
+        </a>
       </MenuItem>
-      <MenuItem active={slides.CONTACT.slide === activeSlide}>
+      <MenuItem data-menuanchor={slides.CONTACT.anchorName}>
         <img src="./images/menu-stroke.svg" alt="menu-stroke" />
-        <button
-          type="button"
-          onClick={() => changeFullPageSlide(slides.CONTACT.slide)}
+        <a
+          href={`#${slides.CONTACT.anchorName}`}
         >
           Contact
-        </button>
+        </a>
       </MenuItem>
     </SectionMenuWrapper>
   );
 }
-
-SectionMenu.propTypes = {
-  activeSlide: PropTypes.number.isRequired,
-  changeFullPageSlide: PropTypes.func.isRequired,
-};
 
 export default SectionMenu;

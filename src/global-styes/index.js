@@ -13,10 +13,6 @@ const GlobalStyle = createGlobalStyle`
     color: #333;
   }
 
-  .fullpage-slide {
-    font-size: 24px;
-  }
-
   p {
     font-size: 18px;
     line-height: 1.4em;
