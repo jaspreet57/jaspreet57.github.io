@@ -4,14 +4,12 @@ const StyledSocialList = styled.ul`
   text-align: right;
   margin: 0;
   font-size: 1em;
+  padding: 0;
   li {
     display: inline-block;
     padding-left: 0.75em;
   }
-  display: none;
-  @media (min-width: 992px) {
-    display: block;
-  }
+  display: block;
 `;
 
 const SocialLink = styled.a`
@@ -20,8 +18,8 @@ const SocialLink = styled.a`
   box-shadow: none;
   min-width: 0;
   max-width: 400px;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   font-weight: 400;
   padding: 0;
@@ -30,7 +28,7 @@ const SocialLink = styled.a`
   color: #fff;
   position: relative;
   z-index: 1;
-  border-radius: 40px;
+  border-radius: 20px;
   backface-visibility: hidden;
   -webkit-font-smoothing: grayscale;
   transition: background-color 0.25s ease-in-out;
@@ -60,8 +58,19 @@ const SocialLink = styled.a`
   }
 
   i {
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  @media (min-width: 992px) {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+
+    i {
+      font-size: 30px;
+      line-height: 60px;
+    }
   }
 `;
 
