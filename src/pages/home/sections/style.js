@@ -120,4 +120,14 @@ const ExternalLinkButton = styled.a`
   }
 `;
 
-export { SectionWrapper, TitleBox, ShowcaseBox, PageLink, ExternalLinkButton };
+const ProfileDp = styled.img`
+  position: relative;
+  display: block;
+  margin: auto;
+  height: 40vh;
+  @media (min-width: 992px) {
+      height: 60vh;
+  }
+`;
+
+export { SectionWrapper, TitleBox, ShowcaseBox, PageLink, ExternalLinkButton, ProfileDp };

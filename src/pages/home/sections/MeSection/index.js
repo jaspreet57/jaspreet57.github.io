@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { SectionWrapper, TitleBox, ShowcaseBox, ExternalLinkButton } from '../style';
+import { SectionWrapper, TitleBox, ShowcaseBox, ExternalLinkButton, ProfileDp } from '../style';
 
 
 function MeSection({ active }) {
@@ -18,14 +18,8 @@ function MeSection({ active }) {
       </TitleBox>
       <ShowcaseBox active={active}>
         <div className="image-wrapper">
-          <img
+          <ProfileDp
             alt="Showcase Here"
-            style={{
-              position: 'relative',
-              display: 'block',
-              margin: 'auto',
-              height: '50vh',
-            }}
             src="./images/jsingh-dive.svg"
           />
           
