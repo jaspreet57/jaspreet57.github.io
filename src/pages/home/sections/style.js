@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
 const SectionWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    color: white;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  color: white;
 `;
 
 const TitleBox = styled.div`
@@ -34,7 +33,7 @@ const TitleBox = styled.div`
       font-size: 5rem;
     }
     margin: 5px;
-    transform: ${({ active }) => active ? 'none': 'translateX(-150%)'};
+    transform: ${({ active }) => (active ? 'none' : 'translateX(-150%)')};
     transition: transform 0.6s ease-out;
     transition-delay: 0.1s;
     will-change: transform;
@@ -48,7 +47,7 @@ const TitleBox = styled.div`
     img {
       width: 100%;
     }
-    transform: ${({ active }) => active ? 'none': 'translateX(-160%)'};
+    transform: ${({ active }) => (active ? 'none' : 'translateX(-160%)')};
     transition: transform 0.7s ease-out;
     transition-delay: 0.1s;
     will-change: transform;
@@ -63,8 +62,8 @@ const TitleBox = styled.div`
     }
     padding: 10px;
     width: fit-content;
-    opacity: ${({ active }) => active ? '1': '0'};
-    transform: ${({ active }) => active ? 'none': 'translateX(50%)'};
+    opacity: ${({ active }) => (active ? '1' : '0')};
+    transform: ${({ active }) => (active ? 'none' : 'translateX(50%)')};
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
     transition-delay: 0.1s;
     will-change: transform;
@@ -84,7 +83,7 @@ const ShowcaseBox = styled.div`
   @media (min-width: 992px) {
     flex-basis: 50%;
   }
-  /* opacity: ${({ active }) => active ? '1': '0'};
+  /* opacity: ${({ active }) => (active ? '1' : '0')};
   transition: opacity 0.5s ease-out;
   transition-delay: 0.5s;
   will-change: opacity; */
@@ -98,20 +97,27 @@ const ShowcaseBox = styled.div`
 `;
 
 const PageLink = styled(Link)`
-    color: white;
-    text-decoration: none;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 5px 10px;
-    :hover {
-      opacity: 0.6;
-      transition: opacity .3s;
-    }
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  :hover {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
 `;
 
-export {
-  SectionWrapper,
-  TitleBox,
-  ShowcaseBox,
-  PageLink
-}
+const ExternalLinkButton = styled.a`
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  :hover {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+`;
+
+export { SectionWrapper, TitleBox, ShowcaseBox, PageLink, ExternalLinkButton };

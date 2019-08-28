@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { SectionWrapper, TitleBox, ShowcaseBox } from '../style';
+import { SectionWrapper, TitleBox, ShowcaseBox, ExternalLinkButton } from '../style';
+
 
 function MeSection({ active }) {
   return (
@@ -12,6 +13,7 @@ function MeSection({ active }) {
         </div>
         <div className="title-content">
           <h2>Developer | Designer | Tech Enthusiast</h2>
+          <ExternalLinkButton href="https://drive.google.com/file/d/1rCMhdNsE1Rtu9-WGgSCk5EKlqwumYL7E/view" target="_blank">Open Resume</ExternalLinkButton>
         </div>
       </TitleBox>
       <ShowcaseBox active={active}>
