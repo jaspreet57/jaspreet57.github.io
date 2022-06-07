@@ -1,40 +1,22 @@
-# jaspreet57
-<> for [jaspreet-singh.com](http://jaspreet-singh.com) hosted on [Github](https://github.com)
+# :coffee: jaspreet57.github.io :coffee:
 
-A Web Profile about Me (Jaspreet Singh) and My Work.
+<> for [jaspreet-singh.com](https://jaspreet-singh.com) hosted with :heart: by [Github](https://github.com)
 
+A portfolio about me (Jaspreet Singh) and my work.
+
+# Server Environment
+
+This Portfolio app is a [ReactJs](https://reactjs.org) app served as gh-pages from [Github](https://github.com)
+
+> App is live on [jaspreet-singh.com](https://jaspreet-singh.com)
+
+### Build Pipeline Status
+
+> ![prod workflow](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/prod-release.yml/badge.svg)
 
 # Project Setup
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 
 ## Learn More about React
 
