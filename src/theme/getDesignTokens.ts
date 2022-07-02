@@ -1,82 +1,70 @@
 import { PaletteMode } from '@mui/material'
+import {
+  bodyFont,
+  boldTextWeight,
+  darkColors,
+  highlightedFont,
+  lightColors,
+} from './variables'
 
-const getDesignTokens = (mode: PaletteMode) => ({
-  palette: {
-    mode,
-    ...(mode === 'light'
-      ? {
-          // palette values for light mode
-          primary: {
-            main: '#FF5C36',
-          },
-          secondary: {
-            main: '#ff3676',
-          },
-          text: {
-            primary: '#012e33',
-            secondary: '#012e33',
-            disabled: '#012e33',
-            hint: '#012e33',
-          },
-          background: {
-            default: '#faffe6',
-            paper: '#e1f9ff',
-          },
-        }
-      : {
-          // palette values for dark mode
-          primary: {
-            main: '#FF5C36',
-          },
-          secondary: {
-            main: '#ff3676',
-          },
-          text: {
-            primary: '#faffe6',
-            secondary: '#faffe6',
-            disabled: '#faffe6',
-            hint: '#faffe6',
-          },
-          background: {
-            default: '#012e33',
-            paper: '#014e56',
-          },
-        }),
-  },
-  typography: {
-    fontFamily: 'Open Sans',
-    h1: {
-      fontFamily: 'Ubuntu Mono',
+const getDesignTokens = (mode: PaletteMode) => {
+  const colors = mode === 'light' ? lightColors : darkColors
+
+  return ({
+    palette: {
+      mode,
+      primary: {
+        main: colors.primary,
+      },
+      secondary: {
+        main: colors.secondary,
+      },
+      text: {
+        primary: colors.text,
+        secondary: colors.text,
+        disabled: colors.text,
+        hint: colors.text,
+      },
+      background: {
+        default: colors.background,
+        paper: colors.paper
+      },
     },
-    h2: {
-      fontFamily: 'Ubuntu Mono',
+    typography: {
+      fontFamily: bodyFont,
+      h1: {
+        fontFamily: highlightedFont,
+      },
+      h2: {
+        fontFamily: highlightedFont,
+      },
+      h3: {
+        fontFamily: highlightedFont,
+      },
+      h4: {
+        fontFamily: highlightedFont,
+      },
+      h6: {
+        fontFamily: highlightedFont,
+      },
+      h5: {
+        fontFamily: highlightedFont,
+      },
+      subtitle1: {
+        fontFamily: highlightedFont,
+      },
+      subtitle2: {
+        fontFamily: highlightedFont,
+      },
+      button: {
+        fontFamily: highlightedFont,
+        fontWeight: boldTextWeight,
+      },
+      overline: {
+        fontFamily: highlightedFont,
+      },
     },
-    h3: {
-      fontFamily: 'Ubuntu Mono',
-    },
-    h4: {
-      fontFamily: 'Ubuntu Mono',
-    },
-    h6: {
-      fontFamily: 'Ubuntu Mono',
-    },
-    h5: {
-      fontFamily: 'Ubuntu Mono',
-    },
-    subtitle1: {
-      fontFamily: 'Ubuntu Mono',
-    },
-    subtitle2: {
-      fontFamily: 'Ubuntu Mono',
-    },
-    button: {
-      fontFamily: 'Ubuntu Mono',
-      fontWeight: 900,
-    },
-    overline: {
-      fontFamily: 'Ubuntu Mono',
-    },
-  },
-})
+  })
+}
 
 export default getDesignTokens

@@ -1,8 +1,8 @@
 import { PaletteMode } from '@mui/material'
 import { createTheme, Theme } from '@mui/material/styles'
 import { useMemo, useState } from 'react'
-import { ColorModeContextProps } from './ColorModeContext'
-import getDesignTokens from './getDesignTokens'
+import { ColorModeContextProps } from '../context/ColorModeContext'
+import getDesignTokens from '../theme/getDesignTokens'
 
 // A custom theme hook for this app
 const useThemeCreator = (): [Theme, ColorModeContextProps] => {
