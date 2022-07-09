@@ -4,34 +4,37 @@ import Box from '@mui/material/Box'
 import ProfileHighlight from '../../components/svg-components/ProfileHighlight'
 import useMediaQueryResult from '../../hooks/useMediaQueryResult'
 import { SxProps, Theme } from '@mui/material/styles'
-import { highlightedFont } from '../../theme/variables'
+import { boldTextWeight, highlightedFont } from '../../theme/variables'
 
 const IntroSection: React.FC = () => {
   const { isMobileView } = useMediaQueryResult()
 
-  let profileBoxPositions: SxProps<Theme> = {}
   let ContainerBoxStyles: SxProps<Theme> = {}
-  let IntroBoxStyles: SxProps<Theme> = {}
-
+  let IntroBoxStyles: SxProps<Theme> = { textAlign: 'center' }
+  let ProfileBoxStyles: SxProps<Theme> = {}
+  let profileBoxPositions: SxProps<Theme> = {}
+  
+  
   if (!isMobileView) {
-    IntroBoxStyles = {}
     ContainerBoxStyles = { paddingTop: '100px', display: 'flex' }
-    profileBoxPositions = { width: '70%', right: '-50px', top: '25vh', zIndex: -2 }
+    IntroBoxStyles = { width: '50%' }
+    ProfileBoxStyles = { width: '50%' }
+    profileBoxPositions = { zIndex: -2, margin: '0 -45px' }
   }
 
   return (
     <Box component="section" sx={ContainerBoxStyles}>
       <Box sx={IntroBoxStyles}>
-        <Typography gutterBottom color="secondary" sx={{ fontSize: '30px', fontFamily: highlightedFont }}>
+        <Typography color="secondary" sx={{ fontSize: '30px' }}>
           Hi, my name is
         </Typography>
-        <Typography gutterBottom sx={{ fontWeight: 900, fontSize: '80px' }}>
+        <Typography component="h1" sx={{ fontWeight: boldTextWeight, fontSize: '70px' }}>
           Jaspreet Singh.
         </Typography>
       </Box>
 
 
-      <Box sx={profileBoxPositions}>
+      <Box sx={ProfileBoxStyles}>
         <Box sx={profileBoxPositions}>
           <ProfileHighlight />
         </Box>

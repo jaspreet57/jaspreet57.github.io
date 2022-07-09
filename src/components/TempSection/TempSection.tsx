@@ -18,10 +18,7 @@ const TempSection: React.FC = () => {
         {isMobileView ? 'is mobile view' : 'is desktop view'}
       </Typography>
       <Button onClick={colorMode.toggleColorMode}>Toggle Mode</Button>
-      <Box>
-        <ProfileHighlight />
-      </Box>
-
+    
       <Box sx={{ width: 300, height: 300 }}>
         <Logo />
       </Box>

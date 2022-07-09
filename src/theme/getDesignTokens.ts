@@ -32,37 +32,10 @@ const getDesignTokens = (mode: PaletteMode) => {
     },
     typography: {
       fontFamily: bodyFont,
-      h1: {
-        fontFamily: highlightedFont,
-      },
-      h2: {
-        fontFamily: highlightedFont,
-      },
-      h3: {
-        fontFamily: highlightedFont,
-      },
-      h4: {
-        fontFamily: highlightedFont,
-      },
-      h6: {
-        fontFamily: highlightedFont,
-      },
-      h5: {
-        fontFamily: highlightedFont,
-      },
-      subtitle1: {
-        fontFamily: highlightedFont,
-      },
-      subtitle2: {
-        fontFamily: highlightedFont,
-      },
       button: {
         fontFamily: highlightedFont,
         fontWeight: boldTextWeight,
-      },
-      overline: {
-        fontFamily: highlightedFont,
-      },
+      }
     },
   })
 }
