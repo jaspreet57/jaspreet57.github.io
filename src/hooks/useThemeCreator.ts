@@ -6,7 +6,7 @@ import getDesignTokens from '../theme/getDesignTokens'
 
 // A custom theme hook for this app
 const useThemeCreator = (): [Theme, ColorModeContextProps] => {
-  const [mode, setMode] = useState<PaletteMode>('light')
+  const [mode, setMode] = useState<PaletteMode>('dark')
 
   const colorMode = useMemo<ColorModeContextProps>(
     () => ({

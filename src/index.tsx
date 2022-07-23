@@ -9,6 +9,8 @@ import ColorModeContext from './context/ColorModeContext'
 import MediaQueryContext from './context/MediaQueryContext'
 import useMediaQueryCreator from './hooks/useMediaQueryCreator'
 
+import './index.css'
+
 const rootElement = document.getElementById('root')
 const root = createRoot(rootElement!)
 

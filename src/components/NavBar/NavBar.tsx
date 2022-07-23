@@ -14,10 +14,13 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Toolbar from '@mui/material/Toolbar'
 import Slide from '@mui/material/Slide'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
-import { drawerWidth } from '../../theme/variables'
+import { drawerWidth, highlightedFont } from '../../theme/variables'
 import useTheme from '@mui/material/styles/useTheme'
 import { alpha } from '@mui/material/styles'
 import useScrollPosition from '../../hooks/useScrollPosition'
+import Logo from '../svg-components/Logo'
+import { Link } from '@mui/material'
+import useColorMode from '../../hooks/useColorMode'
 
 const navItems = ['Home', 'About', 'Contact']
 
@@ -33,7 +36,7 @@ const DrawerContent: React.FC<{ handleDrawerToggle: () => void }> = ({
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center', fontFamily: highlightedFont }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -48,6 +51,7 @@ const NavBar: React.FC = () => {
   const trigger = useScrollTrigger()
   const scrollPosition = useScrollPosition()
   const theme = useTheme()
+  const colorMode = useColorMode()
 
   const handleDrawerToggle = () => {
     setIsOpen((value) => !value)
@@ -71,17 +75,17 @@ const NavBar: React.FC = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              color="primary"
-              sx={{ flexGrow: 1, display: { xs: 'none', md: 'block' } }}
+            <Box
+              sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
             >
-              MUI
-            </Typography>
+              <Link sx={{ width: '100px' }} href="./" display="block">
+                <Logo />
+              </Link>
+              <Button onClick={colorMode.toggleColorMode}>Toggle Mode</Button>
+            </Box>
             <Box sx={{ display: { xs: 'none', md: 'block' } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: 'primary' }}>
+                <Button key={item} sx={{ color: 'primary', textTransform: 'none' }}>
                   {item}
                 </Button>
               ))}
