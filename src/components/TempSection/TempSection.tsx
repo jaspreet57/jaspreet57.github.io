@@ -12,7 +12,7 @@ const TempSection: React.FC = () => {
   const { isMobileView } = useMediaQueryResult()
 
   return (
-    <Box>
+    <Box sx={{ marginTop: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Typography gutterBottom>
         Create React App with TypeScript{' '}
         {isMobileView ? 'is mobile view' : 'is desktop view'}
