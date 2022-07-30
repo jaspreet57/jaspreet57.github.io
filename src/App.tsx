@@ -8,6 +8,7 @@ import NavBar from './components/NavBar/NavBar'
 import IntroSection from './components/IntroSection/IntroSection'
 import TempSection from './components/TempSection/TempSection'
 import AboutMeSection from './components/AboutMeSection/AboutMeSection'
+import ExperienceSection from './components/ExperienceSection/ExperienceSection'
 
 const App: React.FC = () => {
   const { isMobileView } = useMediaQueryResult()
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         >
           <IntroSection />
           <AboutMeSection />
+          <ExperienceSection />
           <TempSection />
         </Box>
       </Container>

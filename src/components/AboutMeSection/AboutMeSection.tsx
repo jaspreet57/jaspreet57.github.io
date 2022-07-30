@@ -23,7 +23,7 @@ const AboutMeSection: React.FC = () => {
   }
 
   return (
-    <Grid container spacing={1} component="section">
+    <Grid container spacing={1} component="section" mb={10}>
       <Grid item md xs="auto"></Grid>
       <Grid
         item
