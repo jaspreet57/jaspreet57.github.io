@@ -97,7 +97,7 @@ const ExperienceSection: React.FC = () => {
 
 
 
-          {/** Item 2 - Sourcefuse Technologies */}
+          {/** Item 2 - Clipboard Health */}
           <TimelineItem sx={timelineItemStyles}>
             {!isMobileView && <TimelineOppositeContent
               sx={{ m: 'auto 0', fontFamily: highlightedFont }}
