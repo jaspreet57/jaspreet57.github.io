@@ -24,9 +24,7 @@ import useColorMode from '../../hooks/useColorMode'
 
 const navItems = ['Home', 'About', 'Contact']
 
-const DrawerContent: React.FC<{ handleDrawerToggle: () => void }> = ({
-  handleDrawerToggle,
-}) => {
+const DrawerContent: React.FC<{ handleDrawerToggle: () => void }> = ({ handleDrawerToggle }) => {
   return (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -57,13 +55,15 @@ const NavBar: React.FC = () => {
     setIsOpen((value) => !value)
   }
 
+  const shouldElevate = scrollPosition > 50
+
   return (
     <>
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar
           component="nav"
-          sx={{ background: alpha(theme.palette.background.default, 0.9) }}
-          elevation={scrollPosition > 50 ? 4 : 0}
+          sx={{ background: alpha(theme.palette.background.default, (shouldElevate ? 0.9 : 1)) }}
+          elevation={shouldElevate ? 4 : 0}
         >
           <Toolbar>
             <IconButton
@@ -75,9 +75,7 @@ const NavBar: React.FC = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Box
-              sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
-            >
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               <Link sx={{ width: '100px' }} href="./" display="block">
                 <Logo />
               </Link>

@@ -10,15 +10,17 @@ import TempSection from './components/FooterSection/FooterSection'
 import AboutMeSection from './components/AboutMeSection/AboutMeSection'
 import ExperienceSection from './components/ExperienceSection/ExperienceSection'
 import ContactSection from './components/ContactSection/ContactSection'
+import SocialIconsBar from './components/SocialIconsBar/SocialIconsBar'
 
 const App: React.FC = () => {
   const { isMobileView } = useMediaQueryResult()
 
-  const containerPadding = isMobileView ? '0px' : '30px'
+  const containerPadding = isMobileView ? '0px' : '70px'
 
   return (
     <Box sx={{ display: 'flex' }}>
       <NavBar />
+      <SocialIconsBar />
       <Container maxWidth="lg" component="main">
         {/** Below <Toolbar /> is used to add space at the top with the height equal to NavBar height */}
         <Toolbar />
