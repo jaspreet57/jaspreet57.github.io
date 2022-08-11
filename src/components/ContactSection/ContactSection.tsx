@@ -31,7 +31,7 @@ const ContactSection: React.FC = () => {
         <Grid item md xs="auto"></Grid>
         <Grid item md={8} xs={12} textAlign="center">
           <Typography component="p" fontSize="20px" gutterBottom>
-            Have any question or just want to say hi, you can always reach me at email, linkedin or social links. I'll
+            Have any question or just want to say hi, you can always reach out to me at email, linkedin or social links. I'll
             try my best to get back to you!
           </Typography>
           <Button

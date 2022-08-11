@@ -3,20 +3,28 @@ import useMediaQueryResult from '../../../hooks/useMediaQueryResult'
 import { SxProps, Theme, useTheme } from '@mui/material/styles'
 import Link from '@mui/material/Link'
 import { highlightedFont } from '../../../theme/variables'
+import Tooltip from '@mui/material/Tooltip'
 
 const ContactBar: React.FC = () => {
   const { isMobileView } = useMediaQueryResult()
   const theme = useTheme()
 
   let BoxStyles: SxProps<Theme> = {
-    orientation: 'left',
+    orientation: 'right',
     width: '40px',
     position: 'fixed',
     left: 'auto',
     right: '20px',
     zIndex: 10,
-    top: '70vh',
-    transform: 'translate(0, -50%)',
+    bottom: '0',
+    '::before, ::after': {
+      content: '""',
+      display: 'block',
+      width: '1px',
+      height: '10vh',
+      margin: '0px auto',
+      backgroundColor: theme.palette.secondary.main,
+    },
   }
 
   let textBoxStyles: SxProps<Theme> = {
@@ -26,21 +34,23 @@ const ContactBar: React.FC = () => {
     margin: '0px',
     padding: '0px',
     position: 'relative',
-    color: theme.palette.primary.main,
-    '::before, ::after': {
-      content: '""',
-      display: 'block',
-      width: '1px',
-      height: '100vh',
-      margin: '0px auto',
-      backgroundColor: theme.palette.primary.main,
-    },
     a: {
       margin: '10px auto',
       padding: '10px',
       fontFamily: highlightedFont,
       letterSpacing: '0.2em',
       writingMode: 'vertical-rl',
+      color: theme.palette.primary.main,
+    },
+  }
+
+  const hoverLinkStyles: SxProps<Theme> = {
+    position: 'relative',
+    display: 'inline-block',
+    '&:hover': {
+      transition: '0.3s all ease-in-out',
+      color: theme.palette.text.primary,
+      transform: 'translateX(-5px)',
     },
   }
 
@@ -51,9 +61,11 @@ const ContactBar: React.FC = () => {
   return (
     <Box sx={BoxStyles}>
       <Box sx={textBoxStyles}>
-        <Link href="mailto:erjaspreet57@gmail.com" underline="none">
-          erjaspreet57@gmail.com
-        </Link>
+        <Tooltip title="Email Me" placement="left">
+          <Link href="mailto:erjaspreet57@gmail.com" underline="none" sx={hoverLinkStyles}>
+            erjaspreet57@gmail.com
+          </Link>
+        </Tooltip>
       </Box>
     </Box>
   )
