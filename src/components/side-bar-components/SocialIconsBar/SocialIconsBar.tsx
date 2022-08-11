@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box'
-import useMediaQueryResult from '../../hooks/useMediaQueryResult'
+import useMediaQueryResult from '../../../hooks/useMediaQueryResult'
 import { SxProps, Theme, useTheme } from '@mui/material/styles'
 import {
   FacebookIcon,
@@ -8,7 +8,7 @@ import {
   TwitterIcon,
   LinkedInIcon,
   YoutubeIcon,
-} from '../svg-components/feather-icons'
+} from '../../svg-components/feather-icons'
 
 const SocialIconsBar: React.FC = () => {
   const { isMobileView } = useMediaQueryResult()
@@ -21,7 +21,7 @@ const SocialIconsBar: React.FC = () => {
     left: '40px',
     right: 'auto',
     zIndex: 10,
-    top: '50vh',
+    top: '70vh',
     transform: 'translate(-50%, -50%)',
   }
 
