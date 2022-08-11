@@ -6,7 +6,7 @@ export const highlightedFont = 'SF Mono, monospace'
 export const boldTextWeight = 600
 
 // theme
-export const defaultColorMode = 'light' // 'light' or 'dark'
+export const defaultColorMode = 'dark' // 'light' or 'dark'
 
 // colors - light mode
 export const lightColors = selectedTheme.light
