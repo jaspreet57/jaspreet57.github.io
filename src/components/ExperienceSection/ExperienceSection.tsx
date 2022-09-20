@@ -224,7 +224,7 @@ const ExperienceSection: React.FC = () => {
             <TimelineSeparator color="secondary">
               <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
               <TimelineDot color="primary">
-                <KeyboardDoubleArrowLeftIcon />
+                <KeyboardDoubleArrowRightIcon />
               </TimelineDot>
               <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
             </TimelineSeparator>
