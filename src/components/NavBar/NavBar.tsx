@@ -11,6 +11,8 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemText from '@mui/material/ListItemText'
 import MenuIcon from '@mui/icons-material/Menu'
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined'
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
 import Toolbar from '@mui/material/Toolbar'
 import Slide from '@mui/material/Slide'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
@@ -62,7 +64,7 @@ const NavBar: React.FC = () => {
       <Slide appear={false} direction="down" in={!trigger}>
         <AppBar
           component="nav"
-          sx={{ background: alpha(theme.palette.background.default, (shouldElevate ? 0.9 : 1)) }}
+          sx={{ background: alpha(theme.palette.background.default, shouldElevate ? 0.9 : 1) }}
           elevation={shouldElevate ? 4 : 0}
         >
           <Toolbar>
@@ -75,11 +77,10 @@ const NavBar: React.FC = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              <Link sx={{ width: '100px' }} href="./" display="block">
+            <Box sx={{ flexGrow: 1 }}>
+              <Link sx={{ width: '100px', display: { xs: 'none', md: 'flex' } }} href="./">
                 <Logo />
               </Link>
-              <Button onClick={colorMode.toggleColorMode}>Toggle Mode</Button>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'block' } }}>
               {navItems.map((item) => (
@@ -88,6 +89,15 @@ const NavBar: React.FC = () => {
                 </Button>
               ))}
             </Box>
+            <IconButton
+              aria-label="Toggle Color Mode"
+              onClick={colorMode.toggleColorMode}
+              sx={{ marginLeft: '10px' }}
+              edge="end"
+              color="primary"
+            >
+              {theme.palette.mode === 'dark' ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
+            </IconButton>
           </Toolbar>
         </AppBar>
       </Slide>
