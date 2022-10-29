@@ -16,12 +16,11 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
 import Toolbar from '@mui/material/Toolbar'
 import Slide from '@mui/material/Slide'
 import useScrollTrigger from '@mui/material/useScrollTrigger'
-import { drawerWidth, highlightedFont } from '../../theme/variables'
+import { boldTextWeight, drawerWidth, highlightedFont } from '../../theme/variables'
 import useTheme from '@mui/material/styles/useTheme'
 import { alpha } from '@mui/material/styles'
 import useScrollPosition from '../../hooks/useScrollPosition'
-import Logo from '../svg-components/Logo'
-import { Link } from '@mui/material'
+import { lighten, Link } from '@mui/material'
 import useColorMode from '../../hooks/useColorMode'
 
 const navItems = ['Home', 'About', 'Contact']
@@ -30,7 +29,7 @@ const DrawerContent: React.FC<{ handleDrawerToggle: () => void }> = ({ handleDra
   return (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        𝕵ɑรpʀɛɛt 𝕾iɳgɦ
       </Typography>
       <Divider />
       <List>
@@ -78,8 +77,21 @@ const NavBar: React.FC = () => {
               <MenuIcon />
             </IconButton>
             <Box sx={{ flexGrow: 1 }}>
-              <Link sx={{ width: '100px', display: { xs: 'none', md: 'flex' } }} href="./">
-                <Logo />
+              <Link
+                sx={{
+                  width: '200px',
+                  fontWeight: boldTextWeight,
+                  fontSize: '20px',
+                  textDecoration: 'none',
+                  display: { xs: 'none', md: 'flex' },
+                  transition: '0.3s all',
+                  ':hover': {
+                    textShadow: `1px 1px 6px ${lighten(theme.palette.mode === 'dark' ? '#595100' : '#FF0000', 0.2)}`,
+                  }
+                }}
+                href="./"
+              >
+                𝕵ɑรpʀɛɛt 𝕾iɳgɦ
               </Link>
             </Box>
             <Box sx={{ display: { xs: 'none', md: 'block' } }}>
