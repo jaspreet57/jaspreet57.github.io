@@ -32,13 +32,13 @@ const IntroSection: React.FC = () => {
           Jaspreet Singh.
         </Typography>
         <Typography component="h2" gutterBottom sx={{ fontWeight: boldTextWeight, fontSize: '36px' }}>
-          I'm a Javascript Developer.
+          I'm a Javascript Developer,
         </Typography>
-        <Typography component="p" sx={{ fontSize: '20px' }} gutterBottom>
-          I’m a software engineer specializing in building and designing web apps. Currently, I’m focused on developing
-          cloud solutions that helps IOT devices and mobile apps to communicate with each other.
+        <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom>
+          - specializing in building and designing web apps. <br />- Currently, I’m focused on developing AWS cloud
+          solutions that help our customers to use various IOT products efficiently. 
         </Typography>
-        <Box display="flex" justifyContent={isMobileView ? 'center': 'flex-end'} mt={3} mb={isMobileView ? 3 : 0}>
+        <Box display="flex" justifyContent='center' mt={3} mb={isMobileView ? 3 : 0}>
           <Button variant="outlined" color="primary" size="large" sx={{ fontSize: '20px', textTransform: 'none' }}>
             Download Resume
           </Button>

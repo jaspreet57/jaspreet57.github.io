@@ -32,16 +32,21 @@ const AboutMeSection: React.FC = () => {
             >
               About Me
             </Typography>
-            <Typography component="p" fontSize="20px" gutterBottom>
-              Hello! My name is Jaspreet and I enjoy creating things that live on the internet. My interest in web
-              development started back in 2012 in college times when I used to make blog and wordpress sites for college
-              notes. Editing blog templates taught me a lot about HTML & CSS!
+            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom>
+              I enjoy the stuff like programming, learning new skills, science, and teaching others.
             </Typography>
-            <Typography component="p" fontSize="20px" gutterBottom>
-              Fast-forward to today, and I’ve had the privilege of working at a start-up, a huge corporation, and with
-              few freelancing clients. I have been teaching programming also as a freelancer teacher.
+            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom>
+              My interest in web development started back in 2012 in college times when I used to make blog and
+              wordpress sites for college notes. Editing blog templates taught me a lot about HTML & CSS!
             </Typography>
-            <Typography component="p" fontSize="20px" gutterBottom fontWeight="bold">
+            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom>
+              Fast-forward to today, and I’ve had the privilege of working at start-ups, remote companies, huge
+              corporations, and with few freelancing clients.
+            </Typography>
+            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom>
+              I have also been involved in teaching Javascript and other programing concepts.
+            </Typography>
+            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom fontWeight="bold">
               Here are a few technologies I’ve been working with recently:
             </Typography>
             <Grid container spacing={1}>
