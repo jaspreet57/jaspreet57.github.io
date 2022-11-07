@@ -1,12 +1,14 @@
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
+import Avatar from '@mui/material/Avatar'
+import Paper from '@mui/material/Paper'
 
 import { boldTextWeight, highlightedFont } from '../../theme/variables'
 import GoIcon from '../svg-components/custom-icons/GoIcon'
 import ReactIcon from '../svg-components/custom-icons/ReactIcon'
 import JavascriptIcon from '../svg-components/custom-icons/JavascriptIcon'
-import { Avatar } from '@mui/material'
+
 import useTheme from '@mui/material/styles/useTheme'
 import OfficeImage from '../../assets/images/office-pic.jpeg'
 
@@ -43,33 +45,52 @@ const AboutMeSection: React.FC = () => {
               Fast-forward to today, and I’ve had the privilege of working at start-ups, remote companies, huge
               corporations, and with few freelancing clients.
             </Typography>
-            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom>
+            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom mb={3}>
               I have also been involved in teaching Javascript and other programing concepts.
             </Typography>
-            <Typography component="p" sx={{ fontSize: '1.1rem' }} gutterBottom fontWeight="bold">
-              Here are a few technologies I’ve been working with recently:
-            </Typography>
-            <Grid container spacing={1}>
-              <Grid item display="flex" alignItems="center" md={4} xs={6}>
-                <JavascriptIcon width="50px" />
-                <Typography fontWeight="bold" fontSize="20px">
-                  Javascript
-                </Typography>
+            <Paper elevation={6} sx={{ padding: '10px' }}>
+              <Typography component="h3" sx={{ fontSize: '2rem', fontWeight: boldTextWeight }}>
+                Skills &amp; Technologies
+              </Typography>
+              <Typography component="p" gutterBottom>
+                I’ve been working with following technologies recently:
+              </Typography>
+              <Grid container spacing={1} mt={1}>
+                <Grid item display="flex" alignItems="center" md={4} xs={6}>
+                  <JavascriptIcon width="50px" />
+                  <Box>
+                    <Typography fontWeight="bold" fontSize="18px" sx={{ lineHeight: '1rem' }}>
+                      Javascript
+                    </Typography>
+                    <Typography component="span" fontSize="14px">
+                      7 years
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item display="flex" alignItems="center" md={4} xs={6}>
+                  <ReactIcon width="50px" />
+                  <Box>
+                    <Typography fontWeight="bold" fontSize="18px" sx={{ lineHeight: '1rem' }}>
+                      React JS
+                    </Typography>
+                    <Typography component="span" fontSize="14px">
+                      5 years
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item display="flex" alignItems="center" md={4} xs={6}>
+                  <GoIcon width="55px" />
+                  <Box>
+                    <Typography fontWeight="bold" fontSize="18px" sx={{ lineHeight: '1rem' }}>
+                      Go Lang
+                    </Typography>
+                    <Typography component="span" fontSize="14px">
+                      2 years
+                    </Typography>
+                  </Box>
+                </Grid>
               </Grid>
-              <Grid item display="flex" alignItems="center" md={4} xs={6}>
-                <ReactIcon width="50px" />
-                <Typography fontWeight="bold" fontSize="20px">
-                  {' '}
-                  React JS
-                </Typography>
-              </Grid>
-              <Grid item display="flex" alignItems="center" md={4} xs={6}>
-                <GoIcon width="50px" />
-                <Typography fontWeight="bold" fontSize="20px">
-                  Go Lang
-                </Typography>
-              </Grid>
-            </Grid>
+            </Paper>
           </Grid>
           <Grid item md={4} xs={12}>
             <Typography
