@@ -19,7 +19,7 @@ const IntroSection: React.FC = () => {
     ContainerBoxStyles = { paddingTop: '100px', display: 'flex' }
     IntroBoxStyles = { width: '55%' }
     ProfileBoxStyles = { width: '45%', zIndex: -2 }
-    profileBoxPositions = { margin: '10px -40px 0 -50px' }
+    profileBoxPositions = { margin: '0px -40px 0 -40px' }
   }
 
   return (
