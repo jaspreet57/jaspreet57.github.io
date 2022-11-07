@@ -1,4 +1,4 @@
-name: Production Deployment to www.jaspreet-singh.com
+name: prod-release-build
 on:
   push:
     branches:

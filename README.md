@@ -1,4 +1,7 @@
 # :coffee: jaspreet57.github.io :coffee:
+[![prod build](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/prod-release.yml/badge.svg)](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/prod-release.yml)
+[![prod deploy](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/pages/pages-build-deployment)
+
 
 <> for [jaspreet-singh.com](https://jaspreet-singh.com) hosted with :heart: by [Github](https://github.com)
 
@@ -9,10 +12,6 @@ A portfolio about me (Jaspreet Singh) and my work.
 This Portfolio app is a [ReactJs](https://reactjs.org) app served as gh-pages from [Github](https://github.com)
 
 > App is live on [jaspreet-singh.com](https://jaspreet-singh.com)
-
-### Build Pipeline Status
-
-> ![prod workflow](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/prod-release.yml/badge.svg)
 
 # Project Setup
 
