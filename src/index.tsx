@@ -1,5 +1,5 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
@@ -12,7 +12,6 @@ import useMediaQueryCreator from './hooks/useMediaQueryCreator'
 import './index.css'
 
 const rootElement = document.getElementById('root')
-const root = createRoot(rootElement!)
 
 const RootComponent: React.FC = () => {
   const [theme, colorMode] = useThemeCreator()
@@ -32,4 +31,9 @@ const RootComponent: React.FC = () => {
   )
 }
 
-root.render(<RootComponent />)
+if (rootElement?.hasChildNodes()) {
+  hydrateRoot(rootElement, <RootComponent />)
+} else {
+  const root = createRoot(rootElement!)
+  root.render(<RootComponent />)
+}
