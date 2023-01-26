@@ -1,0 +1,40 @@
+@tailwind utilities;
+
+:root,
+html[data-theme="light"] {
+  --color-base: #012e33;
+  --color-primary: #FF5C36;
+  --color-fill: #faffe6;
+  --color-paper: #e1f9ff;
+}
+html[data-theme="dark"] {
+  --color-base: rgb(200, 204, 184);
+  --color-primary: #FF5C36;
+  --color-fill: #022E40;
+  --color-paper: #014e56;
+}
+
+#sun-svg,
+html[data-theme="dark"] #moon-svg {
+  display: none;
+}
+
+#moon-svg,
+html[data-theme="dark"] #sun-svg {
+  display: block;
+}
+
+body {
+  @apply
+  font-sans /** font-family */
+  bg-fill text-base /** color */
+  selection:bg-base selection:text-fill /** color on selection */
+  min-h-screen flex flex-col /** spacing */
+}
+
+a {
+  @apply
+  font-mono /** font-family */
+  text-primary /** color */
+  selection:bg-primary selection:text-white /** color on selection */
+}
