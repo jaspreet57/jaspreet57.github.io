@@ -1,0 +1,23 @@
+@layer base {
+  :root,
+  html[data-theme="light"] {
+    --color-base: #012e33;
+    --color-h1: #012e33;
+    --color-h2: #012e33;
+    --color-h3: #012e33;
+    --color-h4: #012e33;
+    --color-primary: #ff5c36;
+    --color-fill: #faffe6;
+    --color-paper: #e1f9ff;
+  }
+  html[data-theme="dark"] {
+    --color-base: #94a3b8; /** Slate:400 */
+    --color-h1: #f8fafc; /** Slate:50 */
+    --color-h2: #f1f5f9; /** Slate:100 */
+    --color-h3: #e2e8f0; /** Slate:200 */
+    --color-h4: #cbd5e1; /** Slate:300 */
+    --color-primary: #ff5c36;
+    --color-fill: #0f172a; /** Slate:900 */
+    --color-paper: #1e293b; /** Slate:800 */
+  }
+}
