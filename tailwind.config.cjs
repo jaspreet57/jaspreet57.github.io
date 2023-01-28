@@ -12,6 +12,10 @@ module.exports = {
       },
       colors: {
         base: "var(--color-base)",
+        h1: "var(--color-h1)",
+        h2: "var(--color-h2)",
+        h3: "var(--color-h3)",
+        h4: "var(--color-h4)",
         primary: "var(--color-primary)",
         fill: "var(--color-fill)",
         paper: "var(--color-paper)",
