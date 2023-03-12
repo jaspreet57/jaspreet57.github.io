@@ -4,6 +4,4 @@ export const SITE = {
   description:
     "I'm a Javascript Developer. I enjoy creating things that live on the internet.",
   title: "Jaspreet Singh | A Web Developer & Designer",
-  lightAndDarkMode: true,
-  postPerPage: 3,
 };

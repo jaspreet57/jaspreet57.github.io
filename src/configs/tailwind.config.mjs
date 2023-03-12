@@ -1,16 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme");
+import defaultTheme from 'tailwindcss/defaultTheme.js'
 
-module.exports = {
+export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       fontFamily: {
+        // custom fonts imported in layouts/MainLayout.astro
         sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
         mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },
       colors: {
+        // custom color variables defined in tailwind-styles/variables.css
         base: "var(--color-base)",
         h1: "var(--color-h1)",
         h2: "var(--color-h2)",

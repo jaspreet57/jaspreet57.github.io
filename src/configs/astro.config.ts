@@ -8,7 +8,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://www.jaspreet-singh.com/",
   integrations: [
-    tailwind(),
+    tailwind({
+      config: { path: 'src/configs/tailwind.config.mjs' }, // custom path to a Tailwind config file
+    }),
     // sitemap(), // todo
   ],
 });
