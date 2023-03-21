@@ -17,7 +17,7 @@
     --color-h3: #e2e8f0; /** Slate:200 */
     --color-h4: #cbd5e1; /** Slate:300 */
     --color-primary: #ff5c36;
-    --color-fill: #0f172a; /** Slate:900 */
-    --color-paper: #1e293b; /** Slate:800 */
+    --color-fill: rgb(2, 46, 64); /** Slate:900 */
+    --color-paper: rgb(1, 78, 86); /** Slate:800 */
   }
 }
