@@ -3,10 +3,11 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
+import { SITE } from "./page.config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.jaspreet-singh.com/",
+  site: SITE.website,
   integrations: [
     tailwind({
       config: { path: 'src/configs/tailwind.config.mjs' }, // custom path to a Tailwind config file

@@ -1,9 +1,13 @@
 @layer base {
+    html {
+      @apply h-full /** spacing */;
+    }
+
     body {
       @apply font-sans /** font-family */
       bg-fill text-base /** color */
       selection:bg-base selection:text-fill /** color on selection */
-      min-h-screen flex flex-col /** spacing */;
+      h-full /** spacing */;
     }
   
     h1 {
