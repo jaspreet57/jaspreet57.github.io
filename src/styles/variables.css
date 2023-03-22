@@ -2,22 +2,38 @@
   :root,
   html[data-theme="light"] {
     --color-base: #012e33;
-    --color-h1: #012e33;
-    --color-h2: #012e33;
-    --color-h3: #012e33;
-    --color-h4: #012e33;
+    --color-base-v1: #012e33;
+    --color-base-v2: #012e33;
+    --color-base-v3: #012e33;
+    --color-base-v4: #012e33;
     --color-primary: #ff5c36;
+    --color-primary-v1: #ff5c36;
+    --color-primary-v2: #ff5c36;
+    --color-primary-v3: #ff5c36;
+    --color-primary-v4: #ff5c36;
     --color-fill: #faffe6;
+    --color-fill-v1: #faffe6;
+    --color-fill-v2: #faffe6;
     --color-paper: #e1f9ff;
+    --color-paper-v1: #e1f9ff;
+    --color-paper-v2: #e1f9ff;
   }
   html[data-theme="dark"] {
     --color-base: #94a3b8; /** Slate:400 */
-    --color-h1: #f8fafc; /** Slate:50 */
-    --color-h2: #f1f5f9; /** Slate:100 */
-    --color-h3: #e2e8f0; /** Slate:200 */
-    --color-h4: #cbd5e1; /** Slate:300 */
+    --color-base-v1: #f8fafc; /** Slate:50 */
+    --color-base-v2: #f1f5f9; /** Slate:100 */
+    --color-base-v3: #e2e8f0; /** Slate:200 */
+    --color-base-v4: #cbd5e1; /** Slate:300 */
     --color-primary: #ff5c36;
-    --color-fill: rgb(2, 46, 64); /** Slate:900 */
-    --color-paper: rgb(1, 78, 86); /** Slate:800 */
+    --color-primary-v1: #ff5c36;
+    --color-primary-v2: #ff5c36;
+    --color-primary-v3: #ff5c36;
+    --color-primary-v4: #ff5c36;
+    --color-fill: rgb(2, 46, 64);
+    --color-fill-v1: rgb(2, 46, 64);
+    --color-fill-v2: rgb(2, 46, 64);
+    --color-paper: rgb(1, 78, 86);
+    --color-paper-v1: rgb(1, 78, 86);
+    --color-paper-v2: rgb(1, 78, 86);
   }
 }

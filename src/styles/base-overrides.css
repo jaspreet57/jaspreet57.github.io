@@ -5,35 +5,15 @@
 
     body {
       @apply font-sans /** font-family */
-      bg-fill text-base /** color */
-      selection:bg-base selection:text-fill /** color on selection */
+      bg-fill-default text-base-default /** color */
+      selection:bg-base-default selection:text-fill-default /** color on selection */
       h-full /** spacing */;
-    }
-  
-    h1 {
-      @apply text-h1;
-    }
-  
-    h2 {
-      @apply text-h2;
-    }
-  
-    h3 {
-      @apply text-h3;
-    }
-  
-    h4 {
-      @apply text-h4;
-    }
-  
-    strong {
-      @apply text-h4;
     }
   
     a,
     a * {
       @apply font-mono /** font-family */
-      text-primary /** color */
-      selection:bg-primary selection:text-white /** color on selection */;
+      text-primary-default /** color */
+      selection:bg-primary-default selection:text-white /** color on selection */;
     }
   }
