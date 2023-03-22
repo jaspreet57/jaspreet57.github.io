@@ -10,7 +10,7 @@ export default defineConfig({
   site: SITE.website,
   integrations: [
     tailwind({
-      config: { path: 'src/configs/tailwind.config.mjs' }, // custom path to a Tailwind config file
+      config: { path: 'src/configs/tailwind.config.js' }, // custom path to a Tailwind config file
     }),
     // sitemap(), // todo
   ],
