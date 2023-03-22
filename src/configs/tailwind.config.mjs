@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 
-import defaultTheme from 'tailwindcss/defaultTheme.js'
+import defaultTheme from "tailwindcss/defaultTheme.js";
+import preline from "preline/plugin.js";
 
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: [
+    "./public/**/*.astro",
+    "./src/**/*.{astro,js,jsx,ts,tsx}",
+    "node_modules/preline/dist/*.js",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -24,5 +29,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [preline],
 };
