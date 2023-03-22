@@ -17,15 +17,31 @@ export default {
         mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },
       colors: {
-        // custom color variables defined in tailwind-styles/variables.css
-        base: "var(--color-base)",
-        h1: "var(--color-h1)",
-        h2: "var(--color-h2)",
-        h3: "var(--color-h3)",
-        h4: "var(--color-h4)",
-        primary: "var(--color-primary)",
-        fill: "var(--color-fill)",
-        paper: "var(--color-paper)",
+        // custom color variables defined in styles/variables.css
+        base: {
+          default: "var(--color-base)",
+          v1: "var(--color-base-v1)",
+          v2: "var(--color-base-v2)",
+          v3: "var(--color-base-v3)",
+          v4: "var(--color-base-v4)"
+        },
+        primary: {
+          default: "var(--color-primary)",
+          v1: "var(--color-primary-v1)",
+          v2: "var(--color-primary-v2)",
+          v3: "var(--color-primary-v3)",
+          v4: "var(--color-primary-v4)"
+        },
+        fill: {
+          default: "var(--color-fill)",
+          v1: "var(--color-fill-v1)",
+          v2: "var(--color-fill-v2)",
+        },
+        paper: {
+          default: "var(--color-paper)",
+          v1: "var(--color-paper-v1)",
+          v2: "var(--color-paper-v2)",
+        }
       },
     },
   },
