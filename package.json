@@ -4,11 +4,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev --config src/configs/astro.config.mjs",
+    "dev": "astro dev --config src/configs/astro.config.js",
     "start": "npm run dev",
-    "build": "astro build --config src/configs/astro.config.mjs",
-    "preview": "astro preview --config src/configs/astro.config.mjs",
-    "astro": "astro --config src/configs/astro.config.mjs",
+    "build": "astro build --config src/configs/astro.config.js",
+    "preview": "astro preview --config src/configs/astro.config.js",
+    "astro": "astro --config src/configs/astro.config.js",
     "format:check": "prettier --check .",
     "format": "prettier --write ."
   },
