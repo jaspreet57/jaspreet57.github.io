@@ -1,18 +1,23 @@
 @layer base {
   :root,
   html.light {
-    --color-base: #34585c; /* #012e33;  */
-    --color-base-v1: #1a4347;
-    --color-base-v2: #012e33;
-    --color-base-v3: #012024;
-    --color-base-v4: #001214;
-    --color-base-iv1: #b3c0c2;
-    --color-base-iv2: #e6eaeb;
+    --color-base: #1a4347;
+    --color-base-v1: #012e33;
+    --color-base-v2: #012529;
+    --color-base-v3: #011c1f;
+    --color-base-v4: #000e0f;
+    --color-base-iv1: #809799;
+    --color-base-iv2: #b3c0c2;
     --color-primary: #ff5c36;
     --color-primary-v1: #ff5c36;
     --color-primary-v2: #ff5c36;
     --color-primary-v3: #ff5c36;
     --color-primary-v4: #ff5c36;
+    --color-secondary: #ff3676;
+    --color-secondary-v1: #ff3676;
+    --color-secondary-v2: #ff3676;
+    --color-secondary-v3: #ff3676;
+    --color-secondary-v4: #ff3676;
     --color-fill: #faffe6;
     --color-fill-v1: #faffe6;
     --color-fill-v2: #faffe6;
@@ -33,11 +38,16 @@
     --color-primary-v2: #ff5c36;
     --color-primary-v3: #ff5c36;
     --color-primary-v4: #ff5c36;
-    --color-fill: rgb(2, 46, 64);
-    --color-fill-v1: rgb(2, 46, 64);
-    --color-fill-v2: rgb(2, 46, 64);
-    --color-paper: rgb(1, 78, 86);
-    --color-paper-v1: rgb(1, 78, 86);
-    --color-paper-v2: rgb(1, 78, 86);
+    --color-secondary: #ff3676;
+    --color-secondary-v1: #ff3676;
+    --color-secondary-v2: #ff3676;
+    --color-secondary-v3: #ff3676;
+    --color-secondary-v4: #ff3676;
+    --color-fill: #022e40;
+    --color-fill-v1: #022e40;
+    --color-fill-v2: #022e40;
+    --color-paper: #014e56;
+    --color-paper-v1: #014e56;
+    --color-paper-v2: #014e56;
   }
 }
