@@ -9,6 +9,7 @@ export default {
     "./src/**/*.{astro,js,jsx,ts,tsx}",
     "node_modules/preline/dist/*.js",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -23,14 +24,18 @@ export default {
           v1: "var(--color-base-v1)",
           v2: "var(--color-base-v2)",
           v3: "var(--color-base-v3)",
-          v4: "var(--color-base-v4)"
+          v4: "var(--color-base-v4)",
+          iv1: "var(--color-base-iv1)",
+          iv2: "var(--color-base-iv2)"
         },
         primary: {
           default: "var(--color-primary)",
           v1: "var(--color-primary-v1)",
           v2: "var(--color-primary-v2)",
           v3: "var(--color-primary-v3)",
-          v4: "var(--color-primary-v4)"
+          v4: "var(--color-primary-v4)",
+          iv1: "var(--color-base-iv1)",
+          iv2: "var(--color-base-iv2)"
         },
         fill: {
           default: "var(--color-fill)",
