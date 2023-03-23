@@ -1,52 +1,63 @@
-const primaryColorScheme = ""; // "light" | "dark"
+const HSThemeAppearance = {
+  init() {
+      const defaultTheme = 'auto'
+      let theme = localStorage.getItem('hs_theme') || defaultTheme
 
-// Get theme data from local storage
-const currentTheme = localStorage.getItem("theme");
+      // if (document.querySelector('html').classList.contains('dark')) return
+      this.setAppearance(theme)
+  },
+  _resetStylesOnLoad() {
+      const $resetStyles = document.createElement('style')
+      $resetStyles.innerText = `*{transition: unset !important;}`
+      $resetStyles.setAttribute('data-hs-appearance-onload-styles', '')
+      document.head.appendChild($resetStyles)
+      return $resetStyles
+  },
+  setAppearance(theme, saveInStore = true) {
+      const $resetStylesEl = this._resetStylesOnLoad()
 
-function getPreferTheme() {
-  // return theme value in local storage if it is set
-  if (currentTheme) return currentTheme;
+      if (saveInStore) {
+          localStorage.setItem('hs_theme', theme)
+      }
 
-  // return primary color scheme if it is set
-  if (primaryColorScheme) return primaryColorScheme;
+      if (theme === 'auto') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      }
 
-  // return user device's prefer color scheme
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+      document.querySelector('html').classList.remove('dark')
+      document.querySelector('html').classList.remove('light')
+      document.querySelector('html').classList.remove('auto')
+
+      document.querySelector('html').classList.add(theme)
+
+      setTimeout(() => {
+          $resetStylesEl.remove()
+      })
+  },
+  getAppearance() {
+      let theme = this.getOriginalAppearance()
+      if (theme === 'auto') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      }
+      return theme
+  },
+  getOriginalAppearance() {
+      const defaultTheme = 'auto'
+      return localStorage.getItem('hs_theme') || defaultTheme
+  }
 }
+HSThemeAppearance.init()
 
-let themeValue = getPreferTheme();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  if (HSThemeAppearance.getOriginalAppearance() === 'auto') {
+      HSThemeAppearance.setAppearance('auto', false)
+  }
+})
 
-function setPreference() {
-  localStorage.setItem("theme", themeValue);
-  reflectPreference();
-}
+window.addEventListener('load', () => {
+  const $clickableThemes = document.querySelectorAll('[data-hs-theme-click-value]')
 
-function reflectPreference() {
-  document.firstElementChild.setAttribute("data-theme", themeValue);
-
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
-}
-
-// set early so no page flashes / CSS is made aware
-reflectPreference();
-
-window.onload = () => {
-  // set on load so screen readers can get the latest value on the button
-  reflectPreference();
-
-  // now this script can find and listen for clicks on the control
-  document.querySelector("#theme-btn")?.addEventListener("click", () => {
-    themeValue = themeValue === "light" ? "dark" : "light";
-    setPreference();
-  });
-};
-
-// sync with system changes
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", ({ matches: isDark }) => {
-    themeValue = isDark ? "dark" : "light";
-    setPreference();
-  });
+  $clickableThemes.forEach($item => {
+      $item.addEventListener('click', () => HSThemeAppearance.setAppearance($item.getAttribute('data-hs-theme-click-value'), true))
+  })
+})
