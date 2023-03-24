@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev --config src/configs/astro.config.js",
+    "dev": "astro dev --config src/configs/astro.config.js --host",
     "start": "npm run dev",
     "build": "astro build --config src/configs/astro.config.js",
     "preview": "astro preview --config src/configs/astro.config.js",

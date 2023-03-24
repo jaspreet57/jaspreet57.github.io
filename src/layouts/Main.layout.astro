@@ -1,4 +1,5 @@
 ---
+import PolygonBackground from "src/components/svg-components/PolygonBackground.astro";
 import { SITE } from "src/configs/page.config";
 import "src/styles/main.css";
 // const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION; // todo
@@ -54,6 +55,7 @@ const author = SITE.author;
     <script is:inline src="/theme-setter.js"></script>
   </head>
   <body>
+    <PolygonBackground />
     <slot />
     <script is:inline src="../../node_modules/preline/dist/preline.js"></script>
   </body>
