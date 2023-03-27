@@ -7,7 +7,7 @@
       @apply font-sans /** font-family */
       bg-fill-default text-base-default /** color */
       selection:bg-base-default selection:text-fill-default /** color on selection */
-      h-full /** spacing */;
+      relative min-h-full /** positioning and spacing */;
     }
   
     a,
