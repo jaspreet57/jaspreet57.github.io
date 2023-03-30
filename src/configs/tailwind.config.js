@@ -36,11 +36,11 @@ export default {
           v4: "var(--color-primary-v4)",
         },
         secondary: {
-          default: "var(--color-primary)",
-          v1: "var(--color-primary-v1)",
-          v2: "var(--color-primary-v2)",
-          v3: "var(--color-primary-v3)",
-          v4: "var(--color-primary-v4)",
+          default: "var(--color-secondary)",
+          v1: "var(--color-secondary-v1)",
+          v2: "var(--color-secondary-v2)",
+          v3: "var(--color-secondary-v3)",
+          v4: "var(--color-secondary-v4)",
         },
         fill: {
           default: "var(--color-fill)",
