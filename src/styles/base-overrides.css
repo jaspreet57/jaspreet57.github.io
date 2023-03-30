@@ -5,7 +5,8 @@
 
     body {
       @apply font-sans /** font-family */
-      bg-fill-default text-base-default /** color */
+      bg-fill-default /** background color */
+      text-base-default /** text color */
       selection:bg-base-default selection:text-fill-default /** color on selection */
       relative min-h-full /** positioning and spacing */;
     }
