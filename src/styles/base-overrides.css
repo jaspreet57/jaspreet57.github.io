@@ -1,6 +1,7 @@
 @layer base {
     html {
-      @apply h-full /** spacing */;
+      @apply h-full /** spacing */
+      scroll-smooth overflow-y-scroll /** scrolling */;
     }
 
     body {
