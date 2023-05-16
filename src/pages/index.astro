@@ -1,14 +1,15 @@
 ---
 import ColorModeButton from "src/components/ColorModeButton.astro";
 import Layout from "src/layouts/Main.layout.astro";
+import HeroSection from "src/pages/home-sections/HeroSection.astro";
 ---
 
 <Layout>
-  <main class="mx-auto xl:max-w-6xl max-w-3xl">
-    <p>Welcome to the <strong>new</strong> <a href="#"><strong>Jaspreet's Lab</strong></a></p>
-    <button id="theme-btn" class="rounded-md border border-transparent bg-green-600 py-2 px-4 m-2 text-white shadow-sm hover:bg-green-700">Toggle</button>
+  <HeroSection />
+
+  <p>Welcome to the <strong>new</strong> <a href="#"><strong>Jaspreet's Lab</strong></a></p>
+  <button id="theme-btn" class="rounded-md border border-transparent bg-green-600 py-2 px-4 m-2 text-white shadow-sm hover:bg-green-700">Toggle</button>
 
 
-    <ColorModeButton />
-  </main>
+  <ColorModeButton />
 </Layout>
