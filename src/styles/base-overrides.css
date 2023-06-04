@@ -1,21 +1,27 @@
 @layer base {
-    html {
-      @apply h-full /** spacing */
+  html {
+    @apply h-full /** spacing */
       scroll-smooth overflow-y-scroll /** scrolling */;
-    }
+  }
 
-    body {
-      @apply font-sans /** font-family */
+  body {
+    @apply font-sans /** font-family */
       bg-fill-default /** background color */
       text-base-default /** text color */
       selection:bg-base-default selection:text-fill-default /** color on selection */
-      relative min-h-full /** positioning and spacing */;
-    }
-  
-    a,
-    a * {
-      @apply font-mono /** font-family */
+      relative min-h-full /** positioning and spacing */
+      text-lg /** text sizing */;
+  }
+
+  a,
+  a * {
+    @apply font-mono /** font-family */
       text-primary-default /** color */
       selection:bg-primary-default selection:text-white /** color on selection */;
-    }
   }
+
+  .highlighted,
+  .highlighted * {
+    @apply selection:bg-primary-default selection:text-white /** color on selection */;
+  }
+}

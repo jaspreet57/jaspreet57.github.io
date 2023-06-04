@@ -1,0 +1,132 @@
+---
+import { Image } from "@astrojs/image/components";
+import ProfilePic from "src/assets/images/profile1.jpg";
+import HeroProfileImage from 'src/components/HeroProfileImage.astro'
+---
+
+<style>
+  .hero-section {
+    @apply relative /* position */
+        px-4 sm:px-8 md:px-20 /* content padding */
+        max-w-5xl /* width */
+        mx-auto xs:my-6 sm:my-10 md:my-36 lg:my-36 /* margins */
+        flex flex-col md:justify-center md:items-center /* flex center */
+        md:flex-row-reverse /* flex directions */
+        /* end apply */;
+  }
+
+  .hero-image {
+    @apply md:basis-2/5 /* flex size */
+        xs:px-10 sm:px-20 md:px-0 /* content padding */
+        /* end apply */;
+  }
+
+  .hero-content {
+    @apply md:basis-3/5 /* flex size */
+        /* end apply */;
+  }
+
+  .grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  }
+
+  .grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+  }
+
+  .scroll-to-next {
+    @apply absolute /* positions */
+        md:-bottom-24 lg:-bottom-28 /* margins */
+        /* end apply */;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-image">
+    <HeroProfileImage />
+    <!-- <Image class="grayscale" src={ProfilePic} alt="Jaspreet's Profile Pic" /> -->
+  </div>
+  <div class="hero-content">
+    <header>
+      <span class="text-primary-default lg:text-2xl font-normal">
+        Hi, my name is
+      </span>
+      <h1
+        class="block text-4xl/normal sm:text-5xl/tight lg:text-6xl/tight font-bold bg-clip-text bg-gradient-to-tl from-violet-600 to-secondary-default text-transparent highlighted"
+      >
+        Jaspreet Singh
+      </h1>
+      <h2
+        class="block text-xl/normal sm:text-2xl/normal lg:text-3xl/normal md:my-1 font-medium text-primary-default"
+      >
+        I'm a Full Stack Developer.
+      </h2>
+      <p class="font-semibold mb-4 inline-block highlighted">
+        Expert in ReactJS, NodeJS, and AWS Cloud Solutions.
+      </p>
+      <p>
+        With a strong focus on building and designing web apps, I have gained
+        experience across a wide range of projects using Javascript.
+        Over the past few years, I have been dedicated to developing AWS cloud solutions specifically
+        tailored for IOT devices and applications.
+      </p>
+      <a
+        class="mt-4 inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 dark:focus:ring-offset-gray-800"
+        href="#"
+      >
+        Contact Me
+        <svg
+          class="w-3 h-3"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <path
+            d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"></path>
+        </svg>
+      </a>
+    </header>
+  </div>
+  <a
+    href="#whoami"
+    class="scroll-to-next group link-outline animate-bounce hidden left-1/2 transform -translate-x-1/2 md:flex items-center flex-col"
+  >
+    <span
+      class="font-sans text-base text-base-default group-hover:text-secondary-default"
+    >
+      Scroll</span
+    >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      class="fill-base-default group-hover:fill-secondary-default"
+    >
+      <path
+        d="M11.975 22H12c3.859 0 7-3.14 7-7V9c0-3.841-3.127-6.974-6.981-7h-.06C8.119 2.022 5 5.157 5 9v6c0 3.86 3.129 7 6.975 7zM7 9a5.007 5.007 0 0 1 4.985-5C14.75 4.006 17 6.249 17 9v6c0 2.757-2.243 5-5 5h-.025C9.186 20 7 17.804 7 15V9z"
+      ></path>
+      <path d="M11 6h2v6h-2z"></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      class="fill-base-default group-hover:fill-secondary-default"
+    >
+      <path
+        d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+      ></path>
+    </svg>
+  </a>
+</section>
+<hr />
+
+<!-- End Hero Section -->

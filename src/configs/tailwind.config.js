@@ -9,9 +9,16 @@ export default {
     "./src/**/*.{astro,js,jsx,ts,tsx}",
     "node_modules/preline/dist/*.js",
   ],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+        sm: "640px",
+        md: "768px",
+        lg: "976px",
+        xl: "1440px",
+      },
       fontFamily: {
         // custom fonts imported in layouts/MainLayout.astro
         sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
@@ -26,7 +33,7 @@ export default {
           v3: "var(--color-base-v3)",
           v4: "var(--color-base-v4)",
           iv1: "var(--color-base-iv1)",
-          iv2: "var(--color-base-iv2)"
+          iv2: "var(--color-base-iv2)",
         },
         primary: {
           default: "var(--color-primary)",
@@ -51,7 +58,7 @@ export default {
           default: "var(--color-paper)",
           v1: "var(--color-paper-v1)",
           v2: "var(--color-paper-v2)",
-        }
+        },
       },
     },
   },
