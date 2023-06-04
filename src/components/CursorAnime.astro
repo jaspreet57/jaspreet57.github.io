@@ -1,0 +1,31 @@
+<div
+  class="cursor-anime hidden md:block w-20 h-20 opacity-0 pointer-events-none rounded-full border-2 border-primary-default z-[9999] fixed -translate-x-1/2 -translate-y-1/2"
+>
+</div>
+
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("mousemove", e => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    gsap.to(".cursor-anime", {
+      x: mouseX,
+      y: mouseY,
+      opacity: 0.6,
+      delay: 0,
+    });
+  });
+
+  const hideCursor = () => {
+    gsap.to(".cursor-anime", { opacity: 0 });
+  };
+
+  const showCursor = () => {
+    gsap.to(".cursor-anime", { opacity: 0.6 });
+  };
+
+  document.addEventListener("mouseleave", hideCursor);
+  document.addEventListener("mousedown", hideCursor);
+  document.addEventListener("mouseup", showCursor);
+</script>

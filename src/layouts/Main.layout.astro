@@ -1,10 +1,11 @@
 ---
-import PageBackground from "src/components/svg-components/PageBackground.astro";
+// import PageBackground from "src/components/svg-components/PageBackground.astro";
 import Header from "src/components/Header.astro";
 import Footer from "src/components/Footer.astro";
 import { SITE } from "src/configs/page.config";
 import "src/styles/main.css";
 import PolygonBackground from "src/components/svg-components/PolygonBackground.astro";
+import CursorAnime from "src/components/CursorAnime.astro";
 // const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION; // todo
 
 export interface Props {
@@ -60,6 +61,7 @@ const author = SITE.author;
   <body>
     <!-- <PageBackground /> -->
     <PolygonBackground />
+    <CursorAnime />
     <Header />
     <main>
       <slot />

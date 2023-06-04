@@ -1,0 +1,44 @@
+---
+import { Image } from "@astrojs/image/components";
+import ProfilePic from "src/assets/images/profile1.jpg";
+---
+
+<style>
+  .about-me-section {
+    @apply relative /* position */
+        px-4 sm:px-8 md:px-20 /* content padding */
+        max-w-6xl /* width */
+        mx-auto xs:my-6 sm:my-10 md:my-20 lg:my-20 /* margins */
+        flex flex-col md:justify-center md:items-center /* flex center */
+        md:flex-row-reverse /* flex directions */
+        /* end apply */;
+  }
+
+  .hero-image {
+    @apply md:basis-2/5 /* flex size */
+        xs:px-10 sm:px-20 md:px-0 /* content padding */
+        /* end apply */;
+  }
+
+  .hero-content {
+    @apply md:basis-3/5 /* flex size */
+        /* end apply */;
+  }
+
+  .grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  }
+
+  .grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+  }
+</style>
+
+<!-- About Me Section -->
+<section class="about-me-section">
+
+</section>
+<!-- End About Me Section -->
