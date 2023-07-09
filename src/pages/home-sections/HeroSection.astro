@@ -8,8 +8,8 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
   .hero-section {
     @apply relative /* position */
         px-4 sm:px-8 md:px-20 /* content padding */
-        max-w-5xl /* width */
-        mx-auto xs:my-6 sm:my-10 md:my-36 lg:my-36 /* margins */
+        max-w-6xl /* width */
+        mx-auto xs:my-6 sm:my-10 md:my-32 lg:my-32 /* margins */
         flex flex-col md:justify-center md:items-center /* flex center */
         md:flex-row-reverse /* flex directions */
         /* end apply */;
@@ -42,6 +42,11 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
         md:-bottom-24 lg:-bottom-28 /* margins */
         /* end apply */;
   }
+
+  .custom-gradient-text {
+    @apply bg-clip-text bg-gradient-to-r from-violet-600 to-secondary-default text-transparent;
+  }
+
 </style>
 
 <!-- Hero Section -->
@@ -56,16 +61,16 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
         Hi, my name is
       </span>
       <h1
-        class="block text-4xl/normal sm:text-5xl/tight lg:text-6xl/tight font-bold bg-clip-text bg-gradient-to-tl from-violet-600 to-secondary-default text-transparent highlighted"
+        class="block text-4xl/normal sm:text-5xl/tight lg:text-6xl/tight font-bold text-base-v4 primary-selected"
       >
         Jaspreet Singh
       </h1>
       <h2
-        class="block text-xl/normal sm:text-2xl/normal lg:text-3xl/normal md:my-1 font-medium text-primary-default"
+        class="block tracking-wider text-xl/normal sm:text-2xl/normal lg:text-3xl/normal md:my-1 font-medium text-primary-default"
       >
         I'm a Full Stack Developer.
       </h2>
-      <p class="font-semibold mb-4 inline-block highlighted">
+      <p class="font-bold font-mono mb-4 inline-block primary-selected custom-gradient-text lg:whitespace-nowrap">
         Expert in ReactJS, NodeJS, and AWS Cloud Solutions.
       </p>
       <p>
@@ -127,6 +132,6 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
     </svg>
   </a>
 </section>
-<hr />
+<hr class="max-w-5xl m-auto"/>
 
 <!-- End Hero Section -->
