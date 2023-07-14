@@ -6,6 +6,7 @@ import { SITE } from "src/configs/page.config";
 import "src/styles/main.css";
 import PolygonBackground from "src/components/svg-components/PolygonBackground.astro";
 import CursorAnime from "src/components/CursorAnime.astro";
+import SocialSideBar from "src/components/SocialSideBar.astro";
 // const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION; // todo
 
 export interface Props {
@@ -67,6 +68,7 @@ const author = SITE.author;
       <slot />
     </main>
     <Footer />
+    <SocialSideBar />
     <script is:inline src="../../node_modules/preline/dist/preline.js"></script>
   </body>
 </html>
