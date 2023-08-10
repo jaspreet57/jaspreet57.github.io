@@ -26,11 +26,29 @@
   }
 
   .section-heading {
-    @apply font-mono font-medium /** font-family */
+    @apply text-center /** font-family */
+      my-20 /* margins */
+      block relative /* display */;
+  }
+
+  .section-heading h2 {
+    @apply inline-block font-lato tracking-wider
+      bg-fill-default /** background color **/
+      px-2 /** paddings */
       text-primary-default /** color */
-      my-6 /* margins */
-      inline-block /* display */
       text-2xl md:text-3xl xl:text-4xl /** text sizing */
       selection:bg-primary-default selection:text-white /** color on selection */;
+  }
+
+  .section-heading::before {
+    display: block;
+    position: absolute;
+    height: 2px;
+    top: 50%;
+    width: 100%;
+    /* transform: translateY(-50%); */
+    background: linear-gradient(to right, transparent, #b2b2b2, transparent);
+    content: "";
+    z-index: -1;
   }
 }

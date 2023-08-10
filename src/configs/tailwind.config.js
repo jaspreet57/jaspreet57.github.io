@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         // custom fonts imported in layouts/MainLayout.astro
+        lato: ["Lato", ...defaultTheme.fontFamily.sans],
         sans: ["Work Sans", ...defaultTheme.fontFamily.sans],
         mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },

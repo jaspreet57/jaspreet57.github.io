@@ -22,8 +22,8 @@
     --color-fill-v1: #eaeed9;
     --color-fill-v2: #d8dcc8;
     --color-paper: #e1f9ff;
-    --color-paper-v1: #e1f9ff;
-    --color-paper-v2: #e1f9ff;
+    --color-paper-v1: #b4c7cc;
+    --color-paper-v2: #879599;
   }
   html.dark {
     --color-base: #94a3b8; /** Slate:400 */
