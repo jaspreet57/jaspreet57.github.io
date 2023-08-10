@@ -1,7 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import ProfilePic from "src/assets/images/profile1.jpg";
-import HeroProfileImage from 'src/components/HeroProfileImage.astro'
+import HeroProfileImage from "src/components/HeroProfileImage.astro";
 ---
 
 <style>
@@ -9,7 +9,8 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
     @apply relative /* position */
         px-4 sm:px-8 md:px-20 /* content padding */
         max-w-6xl /* width */
-        mx-auto xs:my-6 sm:my-10 md:my-32 lg:my-32 /* margins */
+        mx-auto xs:mt-6 sm:mt-10 md:mt-24 lg:mt-16 /* margins top */
+        xs:mb-10 sm:mb-10 md:mb-32 lg:mb-32 /* margins bottom */
         flex flex-col md:justify-center md:items-center /* flex center */
         md:flex-row-reverse /* flex directions */
         /* end apply */;
@@ -23,7 +24,9 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
 
   .hero-content {
     @apply md:basis-3/5 /* flex size */
+        lg:pt-20 /* paddings */
         /* end apply */;
+    z-index: 10;
   }
 
   .grayscale {
@@ -46,7 +49,6 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
   .custom-gradient-text {
     @apply bg-clip-text bg-gradient-to-r from-violet-600 to-secondary-default text-transparent;
   }
-
 </style>
 
 <!-- Hero Section -->
@@ -61,7 +63,7 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
         Hi, my name is
       </span>
       <h1
-        class="block text-4xl/normal sm:text-5xl/tight lg:text-6xl/tight font-bold text-base-v4 primary-selected"
+        class="block text-5xl/normal sm:text-6xl/normal lg:text-7xl/normal font-bold font-lato text-base-v4 primary-selected"
       >
         Jaspreet Singh
       </h1>
@@ -70,14 +72,16 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
       >
         I'm a Full Stack Developer.
       </h2>
-      <p class="font-bold font-mono mb-4 inline-block primary-selected custom-gradient-text lg:whitespace-nowrap">
+      <p
+        class="font-bold font-mono mb-4 mt-4 inline-block primary-selected custom-gradient-text lg:whitespace-nowrap"
+      >
         Expert in ReactJS, NodeJS, and AWS Cloud Solutions.
       </p>
       <p>
         With a strong focus on building and designing web apps, I have gained
-        experience across a wide range of projects using Javascript.
-        Over the past few years, I have been dedicated to developing AWS cloud solutions specifically
-        tailored for IOT devices and applications.
+        experience across a wide range of projects using Javascript. Over the
+        past few years, I have been dedicated to developing AWS cloud solutions
+        specifically tailored for IOT devices and applications.
       </p>
       <a
         class="mt-4 inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-4 dark:focus:ring-offset-gray-800"
@@ -100,38 +104,39 @@ import HeroProfileImage from 'src/components/HeroProfileImage.astro'
       </a>
     </header>
   </div>
-  <a
-    href="#whoami"
-    class="scroll-to-next group link-outline animate-bounce hidden left-1/2 transform -translate-x-1/2 md:flex items-center flex-col"
-  >
-    <span
-      class="font-sans text-base text-base-default group-hover:text-secondary-default"
+  <div class="scroll-to-next left-1/2 transform -translate-x-1/2">
+    <a
+      href="#whoami"
+      class="group link-outline animate-bounce hidden md:flex items-center flex-col"
     >
-      Scroll</span
-    >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      class="fill-base-default group-hover:fill-secondary-default"
-    >
-      <path
-        d="M11.975 22H12c3.859 0 7-3.14 7-7V9c0-3.841-3.127-6.974-6.981-7h-.06C8.119 2.022 5 5.157 5 9v6c0 3.86 3.129 7 6.975 7zM7 9a5.007 5.007 0 0 1 4.985-5C14.75 4.006 17 6.249 17 9v6c0 2.757-2.243 5-5 5h-.025C9.186 20 7 17.804 7 15V9z"
-      ></path>
-      <path d="M11 6h2v6h-2z"></path>
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      class="fill-base-default group-hover:fill-secondary-default"
-    >
-      <path
-        d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
-      ></path>
-    </svg>
-  </a>
+      <span
+        class="font-sans text-base text-base-default group-hover:text-secondary-default"
+      >
+        Scroll</span
+      >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        class="fill-base-default group-hover:fill-secondary-default"
+      >
+        <path
+          d="M11.975 22H12c3.859 0 7-3.14 7-7V9c0-3.841-3.127-6.974-6.981-7h-.06C8.119 2.022 5 5.157 5 9v6c0 3.86 3.129 7 6.975 7zM7 9a5.007 5.007 0 0 1 4.985-5C14.75 4.006 17 6.249 17 9v6c0 2.757-2.243 5-5 5h-.025C9.186 20 7 17.804 7 15V9z"
+        ></path>
+        <path d="M11 6h2v6h-2z"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        class="fill-base-default group-hover:fill-secondary-default"
+      >
+        <path
+          d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+        ></path>
+      </svg>
+    </a>
+  </div>
 </section>
-<hr class="max-w-5xl m-auto"/>
 
 <!-- End Hero Section -->
