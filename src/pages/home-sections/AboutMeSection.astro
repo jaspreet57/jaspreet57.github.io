@@ -2,6 +2,23 @@
 import { Image } from "@astrojs/image/components";
 import ProfilePic from "src/assets/images/profile1.jpg";
 import ReactLogo from "src/components/svg-components/ReactLogo.astro";
+
+const circumference = 50 * 2 * Math.PI;
+
+const skills = {
+  javascript: {
+    star: 9,
+  },
+  react: {
+    star: 9,
+  },
+  aws: {
+    star: 7,
+  },
+  go: {
+    star: 5
+  }
+};
 ---
 
 <style lang="scss">
@@ -43,64 +60,8 @@ import ReactLogo from "src/components/svg-components/ReactLogo.astro";
   }
 
   .my-skills {
-    @apply mt-10 flex flex-wrap items-center gap-4;
-    .palette {
-      @apply w-[200px] h-[200px] relative inline-block;
-      perspective: 800px;
-      &__cover {
-        @apply rounded-md w-full h-full absolute top-0 z-[2] overflow-hidden;
-        transition: 0.3s ease;
-        transform-origin: top left;
-        &__border {
-          width: 90%;
-          height: 90%;
-          border: 7px solid;
-          margin: 5%;
-        }
-        span.skill-title {
-          @apply inline-block absolute bottom-2 max-w-[60%] left-2 px-4 py-2 font-lato font-extrabold text-2xl;
-        }
-        span.skill-icon {
-          @apply inline-block absolute top-4 left-[44px] h-24;
-        }
-        &__top {
-          @apply absolute left-0 -ml-[32px] z-[4] opacity-0;
-          width: calc(100% + 64px);
-          border-radius: 3px 3px 4px 4px;
-        }
-      }
-      &__base {
-        @apply absolute bg-paper-default border-2 border-paper-v1 w-full h-full top-0 rounded-lg p-3;
-      }
-      &:hover,
-      &:active {
-        .palette__cover {
-          transform: rotateX(78deg);
-        }
-        .palette__cover__top {
-          animation: startTransition 0.17s forwards 0.1s;
-        }
-      }
-    }
-
-    @keyframes startTransition {
-      0% {
-        opacity: 0;
-        top: 200px;
-        transform: scale(0.5);
-        height: 0;
-      }
-      40% {
-        opacity: 1;
-      }
-      100% {
-        top: 22px;
-        opacity: 1;
-        transform: scale(1);
-        height: 15px;
-        box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.2);
-      }
-    }
+    // @apply mt-10 flex flex-wrap items-center gap-4;  grid grid-cols-1 gap-20 lg:grid-cols-2 lg:gap-10
+    @apply mt-10 flex flex-wrap items-center gap-x-4 gap-y-14;
   }
 </style>
 
@@ -183,64 +144,228 @@ import ReactLogo from "src/components/svg-components/ReactLogo.astro";
       </p>
 
       <div class="my-skills">
-        <div class="palette palette--one">
-          <div class="palette__cover bg-yellow-100 text-yellow-700 dark:bg-yellow-500 dark:text-white">
-            <div class="palette__cover__border border-yellow-700 dark:border-white">
-              <span class="skill-icon text-[#149eca]">
-                <ReactLogo />
-              </span>
-              <span class="skill-title bg-yellow-100 dark:bg-yellow-500">ReactJS</span>
-            </div>
+        <div
+          class="flex items-center px-8 bg-paper-default shadow-lg rounded-xl h-18 flex-grow max-w-md"
+        >
+          <div
+            class="flex items-center justify-center -m-6 overflow-hidden rounded-full bg-green-100 dark:bg-green-500 text-green-800 dark:text-green-100"
+          >
+            <svg class="w-32 h-32 transform translate-x-1 translate-y-1">
+              <circle
+                class="text-paper-v1"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+              <circle
+                class="bg-green-800 dark:bg-green-100"
+                stroke-width="10"
+                stroke-dasharray={circumference}
+                stroke-dashoffset={circumference -
+                  ((skills.javascript.star * 10) / 100) * circumference}
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+            </svg>
+            <span
+              class="absolute text-3xl flex items-center gap-1 text-green-800 dark:text-green-100"
+            >
+              {`${skills.javascript.star}`}
+              <svg
+                class="w-6 h-6 inline-block"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                >
+                </path>
+              </svg>
+            </span>
           </div>
-          <div class="palette__cover__top bg-yellow-100 dark:bg-yellow-500"></div>
-          <div class="palette__base">
-            <div class="pt-14">Experience : 8 Years</div>
-            <div class="pt-2">Rating : 9/10 Years</div>
+          <div class="ml-8 flex flex-col">
+            <p class="font-medium sm:text-xl text-base-v4">JavaScript</p>
+            <span class="text-xs">7 years</span>
           </div>
         </div>
-        <div class="palette palette--one">
-          <div class="palette__cover bg-yellow-100 text-yellow-700">
-            <div class="palette__cover__border border-yellow-700">
-              <span class="skill-icon text-[#149eca]">
-                <ReactLogo />
-              </span>
-              <span class="skill-title bg-yellow-100">ReactJS</span>
-            </div>
+
+        <div
+          class="flex items-center px-8 bg-paper-default shadow-lg rounded-xl h-18 flex-grow max-w-md"
+        >
+          <div
+            class="flex items-center justify-center -m-6 overflow-hidden rounded-full bg-blue-100 dark:bg-blue-500 text-blue-800 dark:text-blue-100"
+          >
+            <svg class="w-32 h-32 transform translate-x-1 translate-y-1">
+              <circle
+                class="text-paper-v1"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+              <circle
+                class="bg-blue-800 dark:bg-blue-100"
+                stroke-width="10"
+                stroke-dasharray={circumference}
+                stroke-dashoffset={circumference -
+                  ((skills.react.star * 10) / 100) * circumference}
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+            </svg>
+            <span
+              class="absolute text-3xl flex items-center gap-1 text-blue-800 dark:text-blue-100"
+            >
+              {`${skills.react.star}`}
+              <svg
+                class="w-6 h-6 inline-block"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                >
+                </path>
+              </svg>
+            </span>
           </div>
-          <div class="palette__cover__top bg-yellow-100"></div>
-          <div class="palette__base">
-            <div class="pt-14">Experience : 8 Years</div>
-            <div class="pt-2">Rating : 9/10 Years</div>
+          <div class="ml-8 flex flex-col">
+            <p class="font-medium sm:text-xl text-base-v4">React JS</p>
+            <span class="text-xs">5 years</span>
           </div>
         </div>
-        <div class="palette palette--one">
-          <div class="palette__cover bg-yellow-100 text-yellow-700">
-            <div class="palette__cover__border border-yellow-700">
-              <span class="skill-icon text-[#149eca]">
-                <ReactLogo />
-              </span>
-              <span class="skill-title bg-yellow-100">ReactJS</span>
-            </div>
+
+        <div
+          class="flex items-center px-8 bg-paper-default shadow-lg rounded-xl h-18 flex-grow max-w-md"
+        >
+          <div
+            class="flex items-center justify-center -m-6 overflow-hidden rounded-full bg-red-100 dark:bg-red-500 text-red-800 dark:text-red-100"
+          >
+            <svg class="w-32 h-32 transform translate-x-1 translate-y-1">
+              <circle
+                class="text-paper-v1"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+              <circle
+                class="bg-red-800 dark:bg-red-100"
+                stroke-width="10"
+                stroke-dasharray={circumference}
+                stroke-dashoffset={circumference -
+                  ((skills.aws.star * 10) / 100) * circumference}
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+            </svg>
+            <span
+              class="absolute text-3xl flex items-center gap-1 text-red-800 dark:text-red-100"
+            >
+              {`${skills.aws.star}`}
+              <svg
+                class="w-6 h-6 inline-block"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                >
+                </path>
+              </svg>
+            </span>
           </div>
-          <div class="palette__cover__top bg-yellow-100"></div>
-          <div class="palette__base">
-            <div class="pt-14">Experience : 8 Years</div>
-            <div class="pt-2">Rating : 9/10 Years</div>
+          <div class="ml-8 flex flex-col">
+            <p class="font-medium sm:text-xl text-base-v4">AWS Services</p>
+            <span class="text-xs">3 years</span>
+            <span class="text-xs">AWS IOT Core / Functions</span>
           </div>
         </div>
-        <div class="palette palette--one">
-          <div class="palette__cover bg-yellow-100 text-yellow-700">
-            <div class="palette__cover__border border-yellow-700">
-              <span class="skill-icon text-[#149eca]">
-                <ReactLogo />
-              </span>
-              <span class="skill-title bg-yellow-100">ReactJS</span>
-            </div>
+
+        <div
+          class="flex items-center px-8 bg-paper-default shadow-lg rounded-xl h-18 flex-grow max-w-md"
+        >
+          <div
+            class="flex items-center justify-center -m-6 overflow-hidden rounded-full bg-yellow-100 dark:bg-yellow-600 text-yellow-800 dark:text-yellow-100"
+          >
+            <svg class="w-32 h-32 transform translate-x-1 translate-y-1">
+              <circle
+                class="text-paper-v1"
+                stroke-width="10"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+              <circle
+                class="bg-yellow-800 dark:bg-yellow-100"
+                stroke-width="10"
+                stroke-dasharray={circumference}
+                stroke-dashoffset={circumference -
+                  ((skills.go.star * 10) / 100) * circumference}
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="50"
+                cx="60"
+                cy="60"
+              >
+              </circle>
+            </svg>
+            <span
+              class="absolute text-3xl flex items-center gap-1 text-yellow-800 dark:text-yellow-100"
+            >
+              {`${skills.go.star}`}
+              <svg
+                class="w-6 h-6 inline-block"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 22 20"
+              >
+                <path
+                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                >
+                </path>
+              </svg>
+            </span>
           </div>
-          <div class="palette__cover__top bg-yellow-100"></div>
-          <div class="palette__base">
-            <div class="pt-14">Experience : 8 Years</div>
-            <div class="pt-2">Rating : 9/10 Years</div>
+          <div class="ml-8 flex flex-col">
+            <p class="font-medium sm:text-xl text-base-v4">Go Lang</p>
+            <span class="text-xs">2 years</span>
           </div>
         </div>
       </div>
