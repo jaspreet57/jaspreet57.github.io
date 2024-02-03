@@ -5,25 +5,14 @@ import HeroSectionTest from "src/pages/home-sections/HeroSectionTest.astro";
 import HeroSection from "src/pages/home-sections/HeroSection.astro";
 import AboutMeSection from "src/pages/home-sections/AboutMeSection.astro";
 import ExperienceSection from "src/pages/home-sections/ExperienceSection.astro";
+import ContactMeSection from "./home-sections/ContactMeSection.astro";
 ---
 
 <Layout>
   <HeroSection />
   <AboutMeSection />
   <ExperienceSection />
-  <HeroSectionTest />
-
-  <div class="max-w-5xl m-auto">
-    <p>
-      Welcome to the <strong>new</strong>
-      <a href="#"><strong>Jaspreet's Lab</strong></a>
-    </p>
-    <button
-      id="theme-btn"
-      class="rounded-md border border-transparent bg-green-600 py-2 px-4 m-2 text-white shadow-sm hover:bg-green-700"
-      >Toggle</button
-    >
-  </div>
-
-  
+  <ContactMeSection />
+  <!-- <HeroSectionTest /> -->
+  <div class="h-14"></div>
 </Layout>
