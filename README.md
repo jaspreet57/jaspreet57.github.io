@@ -24,3 +24,5 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 new line
 
 new one
+
+testing git verify
