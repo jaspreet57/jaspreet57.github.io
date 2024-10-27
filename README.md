@@ -1,12 +1,18 @@
-# Welcome to [Astro](https://astro.build)
+# :coffee: jaspreet57.github.io :coffee:
+[![Build Status](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/jaspreet57/jaspreet57.github.io/actions/workflows/deploy.yml)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<> for [JSingh.me](https://jsingh.me) hosted with :heart: by [Github](https://github.com)
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+Welcome to my corner of the Internet. This repository hosts the code for my Portfolio and Blogs!
 
+# Server Environment
+
+This portfolio is build using [Astro](https://astro.build) served as gh-pages from [Github](https://github.com)
+
+> App is live on [JSingh.me](https://jsingh.me)
+
+# Project Setup
 
 ## 🚀 Project Structure
 
@@ -40,6 +46,7 @@ All commands are run from the root of the project, from a terminal:
 | :--------------------- | :------------------------------------------------- |
 | `npm install`          | Installs dependencies                              |
 | `npm run dev`          | Starts local dev server at `localhost:3000`        |
+| `npm start`            | runs `npm run dev`                                 |
 | `npm run build`        | Build your production site to `./dist/`            |
 | `npm run preview`      | Preview your build locally, before deploying       |
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
