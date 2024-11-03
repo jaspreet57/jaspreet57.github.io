@@ -1,6 +1,6 @@
 ---
-import ProfilePic from "src/assets/images/profile1.jpg?url";
-import ReactLogo from "src/components/svg-components/ReactLogo.astro";
+import { Image } from 'astro:assets';
+import ProfilePic from "@assets/images/profile1.jpg";
 
 const circumference = 50 * 2 * Math.PI;
 
@@ -66,8 +66,8 @@ const skills = {
 
 <!-- About Me Section -->
 <section class="about-me-section" id="whoami">
-  <div class="section-heading mt-48">
-    <h2>Who am <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">I ?</span></h2>
+  <div class="section-heading mt-10">
+    <h2>About <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">me</span></h2>
   </div>
   <div class="md:grid grid-cols-5 grid-rows-5">
     <div
@@ -87,11 +87,7 @@ const skills = {
               d="M79.2202 0.959991L62.7802 17.32L46.3301 0.959991L29.8902 17.32L13.4501 0.959991L0.410156 13.94L0.400146 17.58L13.4501 4.58999L29.8902 20.95L46.3301 4.58999L62.7802 20.95L79.2202 4.58999L93.7302 19.02L95.5402 17.19L79.2202 0.959991Z"
             ></path>
           </svg>
-          <img
-            class="rounded-md relative block shadow-2xl"
-            src={ProfilePic}
-            alt="Jaspreet's Profile Pic"
-          />
+          <Image class="rounded-md relative block shadow-2xl" src={ProfilePic} alt="Jaspreet's Profile Pic" />
           <svg
             width="15"
             height="14"

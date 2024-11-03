@@ -7,17 +7,18 @@ export default {
   content: [
     "./public/**/*.astro",
     "./src/**/*.{astro,js,jsx,ts,tsx}",
-    "node_modules/preline/dist/*.js",
+    "node_modules/preline/preline.js",
   ],
   darkMode: "class",
   theme: {
     extend: {
       screens: {
-        xs: "480px",
-        sm: "640px",
-        md: "768px",
-        lg: "976px",
-        xl: "1440px",
+        "xs": "480px",
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px",
       },
       fontFamily: {
         // custom fonts imported in layouts/MainLayout.astro

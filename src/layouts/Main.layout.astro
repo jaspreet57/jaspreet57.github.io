@@ -1,14 +1,11 @@
 ---
-// import PageBackground from "src/components/svg-components/PageBackground.astro";
-import Header from "src/components/Header.astro";
-import Footer from "src/components/Footer.astro";
 import { SITE } from "@helpers/constants";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import PolygonBackground from "@components/svg-components/PolygonBackground.astro";
+import CursorAnime from "@components/CursorAnime.astro";
+import SocialSideBar from "@components/SocialSideBar.astro";
 import "src/styles/main.css";
-
-import PolygonBackground from "src/components/svg-components/PolygonBackground.astro";
-import CursorAnime from "src/components/CursorAnime.astro";
-import SocialSideBar from "src/components/SocialSideBar.astro";
-// const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION; // todo
 
 export interface Props {
   title?: string;
@@ -17,15 +14,13 @@ export interface Props {
 
 const { title = SITE.title, description = SITE.description } = Astro.props;
 const author = SITE.author;
-
-// todo - add ogImage,
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
       type="image/png"
@@ -65,7 +60,6 @@ const author = SITE.author;
     <script is:inline src="/theme-setter.js"></script>
   </head>
   <body>
-    <!-- <PageBackground /> -->
     <PolygonBackground />
     <CursorAnime />
     <Header />
@@ -74,6 +68,6 @@ const author = SITE.author;
     </main>
     <Footer />
     <SocialSideBar />
-    <script is:inline src="../../node_modules/preline/dist/preline.js"></script>
+    <script is:inline src="./node_modules/preline/preline.js"></script>
   </body>
 </html>
