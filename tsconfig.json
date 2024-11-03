@@ -2,6 +2,12 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     // to enable feature => import from "src/path.js"
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@helpers/*": ["src/helpers/*"]
+
+    }
   }
 }
